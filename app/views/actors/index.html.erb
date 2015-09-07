@@ -1,0 +1,40 @@
+<div class="container">
+	<div class="row">
+		<div class="col-sm-12">
+
+			<h1>Actores</h1>
+
+			<div class="text-right">
+				<%= link_to "<span class='glyphicon glyphicon-plus'></span> Nuevo Actor".html_safe, new_actor_path, class: "btn btn-primary"%>
+			</div>
+
+			<table class="table">
+				<thead>
+					<tr>
+						<th></th>
+						<th>Nombre</th>
+						<th>Biografia</th>
+						<th>Fecha Nacimiento</th>
+						<th>Lugar Nacimiento</th>
+						<th>Feccha de Fallecimiento</th>
+						<th>Lugar de Fallecimiento</th>
+					</tr>
+				</thead>
+				<tbody>
+					<% @actors.each do |actor| %>
+						<tr>
+							<td><img src="<%= actor.image_url %>" class="img-thumbnail" ></td>
+							<td> <%= actor.name %> </td>
+							<td> <%= actor.bio %> </td>
+							<td> <%= actor.birth_date %> </td>
+							<td> <%= actor.birth_place %> </td>
+							<td> <%= actor.alive ? "" : actor.death_date %> </td>
+							<td> <%= actor.alive ? "" : actor.death_place %> </td>
+						</tr>
+					<% end %>
+				</tbody>
+			</table>
+
+		</div>
+	</div>
+</div>
