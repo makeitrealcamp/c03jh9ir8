@@ -4,4 +4,30 @@ class ActorsController < ApplicationController
 		@actors = Actor.all
 	end
 
+	def new
+  		@actor = Actor.new
+  	end	
+
+  	def create
+	  	@actor = Actor.new(actor_params)
+
+	  	if @actor.death_place.nil? 
+	  		@actor.alive = true
+	  	else
+	  		@actor.alive = false
+	  	end
+
+	  	if @actor.save
+	  		redirect_to actors_path, notice: "El Actor ha sido creado con éxito"
+	  	else
+	  		render :new 
+	  	end
+    end		
+
+    private
+
+    	def actor_params
+    		params.require(:actor).permit(:name, :bio, :birth_date, :birth_place, :image_url, :alive, :death_date, :death_place)
+    	end
+
 end
