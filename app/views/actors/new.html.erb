@@ -1,0 +1,44 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6 col-sm-offset-3">
+      <h1>Crear Actor</h1>
+      <%= form_for @actor do |f| %>
+        <div class="form-group">
+          <%= f.text_field :name, placeholder: "Nombre", class: "form-control" %>
+        </div>
+
+        <div class="form-group">
+          <%= f.text_area :bio, placeholder: "Bio", class: "form-control" %>
+        </div>
+
+        <div class="form-group">
+          <%= f.date_field :birth_date, placeholder: "Fecha de Nacimiento", class: "form-control" %>
+        </div>
+
+        <div class="form-group">
+          <%= f.text_field :birth_place, placeholder: "Lugar de Nacimiento", class: "form-control" %>
+        </div>
+
+        <div class="form-group">
+          <%= f.date_field :death_date, placeholder: "Fecha de fallecimiento", class: "form-control" %>
+        </div>
+
+        <div class="form-group">
+          <%= f.text_field :death_place, placeholder: "Lugar de fallecimiento", class: "form-control" %>
+        </div>
+
+        <div class="form-group">
+          <%= f.url_field :image_url, placeholder: "Url foto perfil", class: "form-control" %>
+        </div>
+
+        <div class="checkbox">
+          <label>
+            <%= f.check_box :alive %> Vivo
+          </label>
+        </div>
+
+        <%= f.submit "Guardar", class: "btn btn-primary btn-block" %>
+      <% end %>
+    </div>
+  </div>
+</div>
