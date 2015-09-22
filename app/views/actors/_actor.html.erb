@@ -1,0 +1,11 @@
+<tr class="actor">
+  <td><%= image_tag actor.image_url, class: "img-responsive img-circle img-profile" %></td>
+  <td><%= actor.name %></td>
+  <td><%= actor.bio %></td>
+  <td><%= actor.birth_date %></td>
+  <td><%= actor.birth_place %></td>
+  <% unless actor.alive %>
+    <td><%= actor.death_date %></td>
+    <td><%= actor.death_place %></td>
+  <% end %>
+</tr>
