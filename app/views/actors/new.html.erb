@@ -1,0 +1,32 @@
+<div>
+  <%= form_for @actor do |f| %>
+  <h1>Crear actor</h1>
+  <div>
+    <%= f.text_field :name, placeholder: "Name" %>
+  </div>
+  <div>
+    <%= f.text_area :bio, placeholder: "bio" %>
+  </div>
+  <div>
+    <%= f.date_field :birth_date, placeholder: "birth date" %>
+  </div>
+  <div>
+    <%= f.text_field :birth_place, placeholder: "birth place" %>
+  </div>
+  <div>
+    <%= f.text_field :image_url, placeholder: "photo url"%>
+  </div>
+  <div>
+    <%= f.text_field :alive, placeholder: "alive? (true or false)"%>
+  </div>
+  <div>
+    <%= f.date_field :death_date, placeholder: "death date"%>
+  </div>
+  <div>
+    <%= f.text_field :death_place, placeholder: "death place"%>
+  </div>
+  <div>
+    <%= f.submit "Crear actor" %>
+  </div>
+  <%end%>
+</div>
