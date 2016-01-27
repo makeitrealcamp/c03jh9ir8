@@ -1,0 +1,64 @@
+
+
+<div class="container">
+
+<h1>Lista de actores</h1>
+  <div class="row">
+    <div class="col-sm-12">
+
+
+			<table class="table table-condensed">	
+			<thead>			
+				<tr>
+					
+						<th>Foto</th>
+						<th >Nombre</th>
+						<th>Bio</th>
+						<th >Fecha de Nacimiento</th>
+						<th >Lugar de nacimiento</th>
+						<th >Fecha de Fallecimiento</th>
+						<th >Lugar de Fallecimiento</th>
+
+				</tr>
+			</thead>
+				
+
+
+
+
+
+					<% @actors.each do |actor| %>
+
+						<tr>
+							
+							<td ><%= actor.image_url %></td>
+							<td ><%= actor.name %></td>
+							<td ><%= actor.bio %></td>
+							<td ><%= actor.birth_date %></td>
+							<td ><%= actor.birth_place %></td>
+
+							<% if !actor.alive %>
+
+								<td class="warning"><%= actor.death_date %></td>
+								<td class="warning"><%= actor.death_place %></td>
+
+							<% end %>
+
+
+						</tr>
+						
+
+						
+
+
+
+					
+
+
+					<% end %>
+
+			</table>
+
+			</div>
+		</div>
+	</div>
