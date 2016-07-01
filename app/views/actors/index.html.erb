@@ -1,3 +1,5 @@
+<%= stylesheet_link_tag "actors.scss" %>
+
 <ul>
 	<% @actors.each do |actor| %>
 	<li><strong><%= actor.name %><strong></li>
@@ -10,7 +12,7 @@
 		<li><%= actor.death_date %></li>
 		<li><%= actor.death_place %></li>
 	<% end %>
-	<hr>
+<% end %>
 
-	<% end %>
+<h1><%= link_to "Crear actor", actors_new_path%></h1>
 </ul>

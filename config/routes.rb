@@ -6,7 +6,8 @@ Rails.application.routes.draw do
   # root 'welcome#index'
 
   get '/actors' => 'actors#index'
-
+  get 'actors/new' => 'actors#new'
+  post '/actors' =>'actors#create'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
