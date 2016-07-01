@@ -1,3 +1,14 @@
+<% if @errors %>
+  <ul>
+    <% @errors.each do |error| %>
+  <li> 
+    <%=error%>
+  </li>
+  <% end %>    
+
+  </ul>
+<%end%>
+
 <%= form_for @actor do |f| %>
   <%= label_tag(:name, "Name") %>
   <%= f.text_field :name %>
@@ -11,5 +22,9 @@
   <%= f.text_field :image_url %>
   <%= check_box_tag(:alive) %>
   <%= label_tag(:alive, "Is he/she dead?") %>
+   <%= label_tag(:death_date, "Death date Date") %>
+  <%= f.text_field :death_place %>
+   <%= label_tag(:birth_place, "Death Place") %>
+  <%= f.text_field :birth_date %>
   <%= submit_tag("Crear") %>
 <% end %>
