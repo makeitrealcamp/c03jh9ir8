@@ -20,12 +20,12 @@ label {
 	margin-left: 20px;	
 }
 
-#actor_name, #actor_bio, #actor_birth_date, #actor_birth_place, #actor_image_url, #actor_death_date, #actor_death_place {
+.frame input {
 	width: 40%;
 	margin-left: 30px;
 }
 
-.button input{
+.button{
 	width: 20%;
 	margin-left: 28px; 
 	margin-bottom: 20px;
