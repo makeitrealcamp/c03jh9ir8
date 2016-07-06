@@ -9,22 +9,20 @@
   </ul>
 <%end%>
 
-<%= form_for @actor do |f| %>
-  <%= label_tag(:name, "Name") %>
+<div class="frame">
+  <h1>Create a new actor</h1>
+  <%= bootstrap_form_for @actor do |f| %>
   <%= f.text_field :name %>
-  <%= label_tag(:bio, "Biography") %>
   <%= f.text_field :bio %>
-  <%= label_tag(:birth_date, "Birth Date") %>
   <%= f.text_field :birth_date %>
-  <%= label_tag(:birth_place, "Birth Place") %>
   <%= f.text_field :birth_place %>
-  <%= label_tag(:image_url, "Url Picture") %>
   <%= f.text_field :image_url %>
+  <%= label_tag(:alive, "Is He/She Death") %>
   <%= check_box_tag(:alive) %>
-  <%= label_tag(:alive, "Is he/she dead?") %>
-   <%= label_tag(:death_date, "Death date Date") %>
+  <%= f.text_field :death_date %>
   <%= f.text_field :death_place %>
-   <%= label_tag(:birth_place, "Death Place") %>
-  <%= f.text_field :birth_date %>
+  <div class="button">
   <%= submit_tag("Crear") %>
+  </div>
 <% end %>
+</div>

@@ -1,23 +1,25 @@
-<%= stylesheet_link_tag "actors.scss" %>
-<div class="container">
-<ul>
-	<% @actors.each do |actor| %>
-	<li><strong><%= actor.name %><strong></li>
-	<div class="picture"> 
-	<li><img src= <%= actor.image_url%></li>
-	</div>
-	<div class='bio'>
-	<li><%= actor.bio %></li>
-	<% if actor.alive== true %>
-		<li><%= actor.birth_date %></li>
-		<li><%= actor.birth_place %></li>
-	<% else %>
-		<li><%= actor.death_date %></li>
-		<li><%= actor.death_place %></li>
-	<% end %>
-	</div>
+<% @actors.each do |actor| %>
+    <div class="row">
+        <div>
+            <strong><%= actor.name %></strong>
+          </div>
+        <div class="col-md-4 image">
+            <img src= <%= actor.image_url %> height="120" width="100" />
+        </div>
+        <div class="col-md-8">
+           <p><%= actor.bio %></p>
+           <% if actor.alive== true %>
+                <p><%= actor.birth_date %></p>
+                <p><%= actor.birth_place %></p>
+            <% else %>
+                <p><%= actor.death_date %></p>
+                <p><%= actor.death_place %></p>
+            <% end %>  
+        </div>
+    </div>
 <% end %>
-</div>
 
-<h1><%= link_to "Crear actor", actors_new_path%></h1>
-</ul>
+<h1><%= link_to "Crear actor", actors_new_path%></h1> 
+
+    
+	
