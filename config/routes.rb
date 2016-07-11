@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   get '/actors' => 'actors#index'
   get 'actors/new' => 'actors#new'
   post '/actors' =>'actors#create'
-  get '/actor/:id' =>'actor#show', as: "actor"
+  get '/actor/:id' =>'actors#show', as: "actor"
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

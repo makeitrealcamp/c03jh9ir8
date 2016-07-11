@@ -1,6 +1,18 @@
-<div class="container">
-	<div class="picture">
-		<%= @actor.image_url %>
-	</div>
-
+<div class="row">
+  <div class="name">
+    <strong><%= @actor.name %></strong>
+  </div>
+  <div class="col-md-1 image">
+    <img src= <%= @actor.image_url %> height="120" width="100" />
+  </div>
+  <div class="col-md-8">
+    <p><%= @actor.bio %></p>
+      <% if @actor.alive == true %>
+        <p><%= @actor.birth_date %></p>
+        <p><%= @actor.birth_place %></p>
+      <% else %>
+        <p><%= @actor.death_date %></p>
+        <p><%= @actor.death_place %></p>
+     <% end %>  
+   </div>
 </div>
