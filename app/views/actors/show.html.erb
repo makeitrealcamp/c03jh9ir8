@@ -1,0 +1,30 @@
+<h1>Listado de los Mejores Actores de Hollywood</h1>
+
+<table border=1 cellspacing=0 cellpadding=2 bordercolor="666633" style="width:100%">
+  <tr>
+  	<th>Foto</th>
+  	<th>Nombre</th>
+  	<th>Bio</th>
+  	<th>Fecha de Nacimiento</th>
+  	<th>Lugar de Nacimiento</th>
+  	<th>Fecha de Fallecimiento</th>
+  	<th>Lugar de Fallecimiento</th>
+  </tr>
+
+  <% @actors.each do |actor|%>
+     <tr>
+       <td><%=image_tag(actor.image_url)%></td>
+       <td><%=actor.name%></td>
+       <td><%=actor.bio%></td>
+       <td><%=actor.birth_date%></td>
+       <td><%=actor.birth_place%></td>
+       <% if actor.alive == false %>
+         <td style="background-color:red; color:white"><%=actor.death_date%></td>
+         <td style="background-color:red; color:white"><%=actor.death_place%></td>
+       <% end %>
+     </tr>
+     	
+  <% end %>
+	
+</table>
+
