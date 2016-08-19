@@ -4,4 +4,8 @@ class ActorsController < ApplicationController
   @actors = Actor.all
  end
 
+ def new
+  @actor = Actor.new	
+ end
+
 end

@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="row">
+  	<div class="col-sm-6 col-sm-offset-3">
+  	  <h1>Publicar Actor</h1>	
+  	  <%= form_for @actor do |f| %>
+
+  	    <div class="form-group">
+  	      <%= f.text_field :name, class: "form-control input-lg", placeholder: "Ingresa el nombre del actor" %>
+  	    </div>
+
+        <div class="form-group">
+           <%= f.text_area :bio, class: "form-control input-lg", placeholder: "Ingresa la Biografía del actor" %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :birth_date , "Fecha de Nacimiento" %> 
+          <%= f.date_field :birth_date, class: "form-control input-lg" %>
+        </div>
+
+        <div class="form-group">
+          <%= f.text_field :birth_place, class: "form-control input-lg", placeholder: "Ingresa el Lugar de Nacimiento" %>
+        </div>
+
+        <div class="form-group">
+          <%= f.select(:alive, [['SI', true], ['NO', false]], 'SI') , class:"form-control" %>
+        </div>
+        
+  	  <% end %>
+
+  	</div>
+  </div>
+</div>	
