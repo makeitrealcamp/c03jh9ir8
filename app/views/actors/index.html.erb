@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <h1>Los Mejores Actores de Hollywood</h1>
+      <div class="text-right">
+        <%= link_to "Crear Actor", new_actor_path, class: "btn btn-primary"%>  
+      </div>
+      <table class="table">
+        <tr>
+          <th>Foto</th>
+          <th>Nombre</th>
+          <th>Bio</th>
+          <th>Fecha de Nacimiento</th>
+          <th>Lugar de Nacimiento</th>
+          <th>Fecha de Fallecimiento</th>
+          <th>Lugar de Fallecimiento</th>
+        </tr>
+
+        <% @actors.each do |actor|%>
+           <tr>
+             <td><img class ="img-rounded" src=<%= actor.image_url %> alt="<%= actor.name %>" height="317" width="214"></td>
+             <td><%=actor.name%></td>
+             <td><%=actor.bio%></td>
+             <td><%=actor.birth_date%></td>
+             <td><%=actor.birth_place%></td>
+             <% if actor.alive == false %>
+               <td><%=actor.death_date%></td>
+               <td><%=actor.death_place%></td>
+             <% end %>
+           </tr>
+            
+        <% end %>
+        
+      </table>  
+    </div>
+  </div>
+</div>
+
+
+
