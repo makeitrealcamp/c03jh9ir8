@@ -1,8 +1,10 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-12">
-      <h1>Mejores Actores de Hollywood</h1>
-
+      <h1>Los Mejores Actores de Hollywood</h1>
+      <div class="text-right">
+        <%= link_to "Crear Actor", new_actor_path, class: "btn btn-primary"%>  
+      </div>
       <table class="table">
         <tr>
           <th>Foto</th>
@@ -17,7 +19,7 @@
         <% @actors.each do |actor|%>
            <tr>
              <!--<td><%=image_tag(actor.image_url)%></td>-->
-             <td><img class ="img-rounded" src=<%= actor.image_url %> alt="<%= actor.name %>"></td>
+             <td><img class ="img-rounded" src=<%= actor.image_url %> alt="<%= actor.name %>" height="317" width="214"></td>
              <td><%=actor.name%></td>
              <td><%=actor.bio%></td>
              <td><%=actor.birth_date%></td>
