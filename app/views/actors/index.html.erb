@@ -1,19 +1,34 @@
 <div class="container">
-  <h1>Actors</h1>
+<div class="row">
+    <div class="col-xs-9">
+      <h1>Actors</h1>
+    </div>
+
+</div>
+
+<div class="row">
+  <div class="col-sm-offset-9 col-sm-3">
+    <%= link_to "Crear Actor", new_actor_path, class: "btn btn-primary"%>
+    
+  </div>
+  <br>
+  <hr>
+</div>
+
   <div class="row">
-  <% @actors.each do |actor| %>
+    <% @actors.each do |actor| %>
     <div class="clearfix col-xs-6 col-md-3">
-      <h3><%= actor.name %></h3>
       <img src="<%= actor.image_url %>" class="img-circle" alt="img" />
+      <h3><%= actor.name %></h3>
       <p><strong>Born: </strong>
-      <%= actor.birth_date %>, <%= actor.birth_place %>
+        <%= actor.birth_date %>, <%= actor.birth_place %>
       </p>
       <p><strong>Biography:</strong>
         <%= actor.bio %>
       </p>
       <% if actor.death_place.to_s != "" %>
       <p><strong>Dead: </strong>
-      <%= actor.death_date %>, <%= actor.death_place %>
+        <%= actor.death_date %>, <%= actor.death_place %>
       </p>
       <% end %>
     </div>
