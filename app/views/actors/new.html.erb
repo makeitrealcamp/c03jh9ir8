@@ -1,0 +1,52 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <%= form_for(@actor) do |actor| %>
+      <% if @actor.errors.any? %>
+      <div id="errors_explanation">
+        <h2><%=pluralize(@actor.errors.count,"error")%> Prohibited this actor from being saved:</h2>
+        <ul>
+        <% @actor.errors.full_messages.each do |message| %>
+          <li><%=message %></li>
+        <% end %>
+        </ul>
+      </div>
+      <% end %>
+        <div class="form-group">
+          <%= actor.label :image_url %>
+          <%= actor.text_field :image_url, class: "form-control" %>
+        </div>
+
+        <div class="form-group">
+          <%= actor.label :name %>
+          <%= actor.text_field :name, class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= actor.label :bio %>
+          <%= actor.text_area :bio, class: "form-control" %>
+        </div>
+
+        <div class="form-group">
+          <%= actor.label :birth_date %>
+          <%= actor.text_field :birth_date, class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= actor.label :birth_place %>
+          <%= actor.text_field :birth_place, class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= actor.label :death_date %>
+          <%= actor.text_field :death_date, class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= actor.label :death_place %>
+          <%= actor.text_field :death_place, class: "form-control" %>
+        </div>
+        <div class="actions">
+          <%= link_to 'Cancel', actors_path, class: 'btn btn-danger' %>
+          <%= actor.submit 'Save Actor', class: 'btn btn-success' %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
