@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 col-md-offset-4">
+        <h1 class="text-center">Crear Actor</h1>
+
+        <%= form_for(@actor) do |actor| %>
+
+        <% if @actor.errors.any? %>
+        <div class="error_explanation">
+          <h2><%= pluralize(@actor.errors.count, "error")%> prohibited this product from being save:</h2>
+
+          <ul>
+            <% @actor.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+        <% end %>
+
+        <div class="form-group">
+          <%= actor.label :name %>
+          <%= actor.text_field :name, class: 'form-control'%>
+        </div>
+
+        <div class="form-group">
+          <%= actor.label :bio %>
+          <%= actor.text_area :bio, class: 'form-control'%>
+        </div>
+
+        <div class="form-group">
+          <%= actor.label :birth_date %>
+          <%= actor.date_field :birth_date, class: 'form-control'%>
+        </div>
+
+        <div class="form-group">
+          <%= actor.label :birth_place %>
+          <%= actor.text_field :birth_place, class: 'form-control'%>
+        </div>
+
+        <div class="form-group">
+          <%= actor.label :image_url %>
+          <%= actor.text_area :image_url, class: 'form-control'%>
+        </div>
+
+        <div class="form-group">
+          <%= actor.label :alive %>
+          <%= actor.check_box :alive, class: 'form-control'%>
+        </div>
+
+        <div class="form-group">
+          <%= actor.label :death_date %>
+          <%= actor.date_field :death_date, class: 'form-control'%>
+        </div>
+
+        <div class="form-group">
+          <%= actor.label :death_place %>
+          <%= actor.text_field :death_place, class: 'form-control'%>
+        </div>
+
+        <div class="actions">
+          <%= link_to 'Cancel',actors_path, class: 'btn btn-danger' %>
+          <%= actor.submit 'Save Actor', class: 'btn btn-success' %>
+        </div>
+
+        <% end %>
+      </div>
+
+    </div>
+
+  </div>
+</body>
+</html>
