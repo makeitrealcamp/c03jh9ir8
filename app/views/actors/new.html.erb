@@ -1,0 +1,87 @@
+<div class="container">
+	<div class="jumbotron">
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2">
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h2>New Actor</h2>
+                  </div>
+                  <div class="panel-body">
+                    <%= form_for(@new_actor) do |actor| %>
+                     
+                      <div class="row">
+                        <div class="col-md-6 col-offset-3">
+                          <div class=	"form-group">
+                            <%= actor.label :name %>
+                            <%= actor.text_field :name, class: 'form-control' %>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class=	"form-group">
+                            <%= actor.label :birth_date %>
+                            <%= actor.date_field :birth_date, as: :date, html5: true , class: 'form-control' %>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class=	"form-group">
+                            <%= actor.label :birth_place %>
+                            <%= actor.text_field :birth_place, class: 'form-control' %>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                          <div class="col-md-12">
+                            <div class=	"form-group">
+                                <%= actor.label :image_url %>
+                                <%= actor.text_field :image_url, class: 'form-control' %>
+                            </div>
+                          </div>
+                      </div>
+                      <hr>
+                      <div class="row">
+                        <div class="col-md-4 col-md-offset-1">
+                            <%= actor.label :alive, 'Actor is death?' %>
+                            <%= actor.check_box :alive %>
+                        </div >
+                        <div class="col-md-6">
+                            <div class="alert alert-warning">Be aware if you don´t check the checkbox the death date and place will be ignored</div>
+                        </div>
+                      </div>
+                      <hr>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class=	"form-group">
+                            <%= actor.label :death_date %>
+                            <%= actor.date_field :death_date, as: :date, html5: true , class: 'form-control' %>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class=	"form-group">
+                            <%= actor.label :death_place %>
+                            <%= actor.text_field :death_place, class: 'form-control' %>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-12">
+                             <div class="form-group">
+                                <%= actor.label :bio %>
+                                <%= actor.text_area :bio, class: 'form-control' %>
+                              </div>
+                        </div>
+                      </div>
+                      <div class="actions">
+                        <%= link_to raw('<span class="glyphicon glyphicon-remove"></span> Cancel'), actors_path, class: 'btn btn-warning btn-large' %>
+                        <%= button_tag(type: "submit", class: "btn btn-success btn-large", name: "Save actor", value: "Save product") do %>
+                          <span class="glyphicon glyphicon-ok"></span> Save actor
+                        <% end %> 
+                      </div>
+                    <% end %>
+                  </div>
+                </div>
+			</div>
+		</div>
+	</div>
+</div>
