@@ -27,7 +27,7 @@
                <td><%= actor.birth_place %></td>
                
 
-               <% if actor.alive == false %>
+               <% if !actor.alive %>
                   <td><%= actor.death_date %></td>
                   <td><%= actor.death_place %></td>
                   <% else %>
