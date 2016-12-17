@@ -1,0 +1,26 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-offset-3 col-sm-6">
+            <h1>CREAR NUEVO USUARIO</h1>
+            <div class="jumbotron">
+              
+              <%= form_for @actor do |actor| %>
+              <ul>
+                 <li>Nombre <%= actor.text_field :name %></li>
+                 <li>Biografía <%= actor.text_area :bio %></li>
+                 <li>Fecha de Nacimiento <%= actor.date_field :birth_date %></li>
+                 <li>Lugar de Nacimiento <%= actor.text_field :birth_place %></li>
+                 <li>url de la foto <%= actor.url_field :image_url %></li>
+                 <li>Aún vive <%= actor.check_box :alive, {}, true, false %></li>
+                 <li>Fecha de Muerte <%= actor.date_field :death_date %></li>
+                 <li>Lugar de la Muerte <%= actor.text_field :death_place %></li>
+              </ul>
+              <%= actor.submit %>
+              <% end %>
+             
+            </div> 
+        </div>
+    </div>
+</div>
+
