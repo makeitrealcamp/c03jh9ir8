@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <table border= "1">
+        <% @actors.each do |actor| %>
+          <tr>
+            <td>
+              <img src="<%= actor.image_url %>" alt="">
+            </td>
+            <td>
+              <h3>Nombre</h3>
+              <%= actor.name %>
+            </td>
+            <td>
+              <h3>Bio</h3>
+              <%= actor.bio %>
+            </td>
+            <td>
+              <h3>Birth Date</h3>
+              <%= actor.birth_date %>
+            </td>
+            <td>
+              <h3>Birth Place</h3>
+              <%= actor.birth_place %>
+            </td>
+            <% unless actor.alive? %>
+              <td>
+                <h3>Death Date</h3>
+                <%= actor.death_date %>
+              </td>
+              <td>
+                <h3>Death Place</h3>
+                <%= actor.death_place %>
+              </td>
+            <% end %>
+          </tr>
+        <% end %>
+    </div>
+  </div>
+</div>
