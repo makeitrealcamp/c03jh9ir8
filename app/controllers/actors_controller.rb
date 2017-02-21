@@ -21,3 +21,6 @@ class ActorsController < ApplicationController
       params.require(:actor).permit(:name, :bio, :birth_date, :birth_place, :alive, :death_date, :death_place, :image_url)
     end
 end
+
+#Comentario
+#Ensayo si el error es por el usuario
