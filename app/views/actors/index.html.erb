@@ -1,0 +1,12 @@
+<h1>Vista para listar actores</h1>
+<ul>
+  <% @actors.each do |actor| %>
+  <li>
+    <img src="<%= actor.image_url %>" alt="">
+    <h3><%= actor.name %></h3>
+    <p><%= actor.bio %></p>
+    <p><%= actor.birth_date %></p>
+    <p><%= actor.birth_place %></p>
+  </li>
+  <% end %>
+</ul>
