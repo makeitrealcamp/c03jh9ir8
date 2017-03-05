@@ -1,12 +1,6 @@
 <div class="container-fluid col-md-8 col-md-offset-2 jumbotron">
   <h1>Crear actor nuevo</h1>
 
-  <% if @errors %>
-    <% @errors.each do |error| %>
-    <p><%= error %></p>
-    <% end %>
-  <% end %>
-
   <%= form_for @actors do |f| %>
     <div class="form-group">
       <%= f.label :name %>

@@ -8,17 +8,11 @@ class ActorsController < ApplicationController
   end
 
   def create
-    @actors = Actor.new(user_params)
-    if @actors.save
-      redirect_to actors_path
-    else
-      @errors = @actors.errors.full_messages
-      render 'actors/new'
-    end
+    actor = Actor.create(user_params)
   end
 
   def user_params
-    params.require(:actor).permit(:name, :bio, :birth_date, :birth_place, :image_url) 
+    params.require(:actor).permit(:name, :bio, :birth_date, :birth_place, :image_url)
   end
 
 end
