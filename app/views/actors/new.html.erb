@@ -1,0 +1,15 @@
+<h1>Crea un nuevo actor</h1>
+<%= form_for :actor do |f| %>
+  <p><%= f.text_field :name, placeholder: "Nombre" %></p>
+  <p><%= f.text_area :bio, placeholder: "Bio" %></p>
+  <p><%= f.date_field :birth_date, placeholder: "Fecha de Nacimiento AAAA-MM-DD" %></p>
+  <p><%= f.text_field :birth_place, placeholder: "Luger de Nacimiento" %></p>
+  <p><%= f.text_field :image_url, placeholder: "Foto (URL)" %></p>
+  <p>
+    <%= check_box_tag(:alive, false) %>
+    <%= label_tag(:alive, "Muerto") %>
+  </p>
+  <p><%= f.date_field :death_date, placeholder: "Fecha de fallecimiento AAAA-MM-DD" %></p>
+  <p><%= f.text_field :death_place, placeholder: "Lugar de fallecimiento" %></p>
+  <p><%= f.submit 'Crear' %></p>
+<% end %>
