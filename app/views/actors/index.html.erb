@@ -1,0 +1,37 @@
+
+
+
+<%@actors.each do |actor| %>
+  <div class="row">
+    <div class="col-3">
+      <img src=<%= actor.image_url%> alt="" style="width:100px;height:100px;">
+    </div> <!-- 25% -->
+    <div class="col-2">
+      <%= actor.name%></th>
+    </div>
+    <div class="col-5">
+      <%= actor.bio%></th>
+    </div>
+    <div>
+      <%= actor.birth_date%></th>
+    </div>
+    <div>
+      <%= actor.birth_place%></th>
+    </div>
+    <% if actor.alive == false %>
+      <div>
+        <%= actor.death_place%></th>
+        <%= actor.death_date%></th>
+      </div>
+    <% end %>
+  </div>
+<% end %>
+
+<!-- t.string :name, limit: 100
+t.text :bio
+t.date :birth_date
+t.string :birth_place, limit: 100
+t.string :image_url
+t.boolean :alive
+t.date :death_date
+t.string :death_place, limit: 100 -->
