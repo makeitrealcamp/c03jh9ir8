@@ -1,0 +1,25 @@
+
+<%= form_for @actor do |f| %>
+<div>
+  <%= f.label :name, 'Name:' %>
+  <%= f.text_field :name, required: true %>
+</div>
+
+<div>
+  <%= f.label :bio, 'Bio:' %>
+  <%= f.text_area :bio, rows: 10, required: true %>
+</div>
+
+<div>
+  <%= f.label :birth_date, 'Birth Date:' %>
+  <%= f.number_field :birth_date, required: true %>
+</div>
+<div>
+  <%= f.label :birth_place, 'Birth Place:' %>
+  <%= f.text_field :birth_place, required: true %>
+</div>
+
+<div>
+  <%= f.submit "Crear Actor" %>
+</div>
+<% end %>

@@ -1,0 +1,27 @@
+<h1>Actors</h1>
+
+<%= link_to 'Crear Actor', new_actor_path %>
+
+<table>
+  <thead>
+    <th>Foto</th>
+    <th>Nombre</th>
+    <th>Bio</th>
+    <th>Fecha de Nacimiento</th>
+    <th>Lugar de Nacimiento</th>
+  </thead>
+
+  <tbody>
+  <% @actors.each do |actor| %>
+    <tr>
+      <td><%= image_tag actor.image_url %></td>
+      <td><%= actor.name %></td>
+      <td><%= actor.bio %></td>
+      <td><%= actor.birth_date %></td>
+      <td><%= actor.birth_place %></td>
+      <td><%= actor.death_date %></td>
+      <td><%= actor.death_place %></td>
+    </tr>
+    </tbody>
+    <% end %>
+  </table>
