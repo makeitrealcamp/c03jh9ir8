@@ -1,0 +1,13 @@
+<h1>CREATE ACTORS</h1>
+<%= form_for :actor, url: actors_path do |f| %>
+  Name: <%= f.text_field :name %><br /><br />
+  Biography : <%= f.text_field :bio %><br /><br />
+  Birth Date : <%= f.text_field :birth_date %><br /><br />
+  Birth Place : <%= f.text_field :birth_place %><br /><br />
+  Image URL : <%= f.text_area :image_url %><br /><br />
+  Alive : <%= f.text_field :alive %><br /><br />
+  Death Date : <%= f.text_field :death_date %><br /><br />
+  Death Place : <%= f.text_field :death_place %><br /><br />
+
+  <%= f.submit %>
+<% end %>
