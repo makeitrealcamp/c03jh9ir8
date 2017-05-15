@@ -8,6 +8,7 @@ class ActorsController < ApplicationController
 
   	def new
   		@actor = Actor.new
+      @actor.attributes = {birth_date: Time.new, death_date: Time.new}
   	end
 
 
