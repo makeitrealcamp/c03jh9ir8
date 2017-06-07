@@ -55,4 +55,5 @@ Rails.application.routes.draw do
   #   end
 
   get "actors", to: "actors#show"
+  resources :actors
 end
