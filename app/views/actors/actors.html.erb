@@ -13,7 +13,7 @@
       <tbody>
         <% @actors.each do |actor| %>
         <tr>
-          <td> <img src=<%="#{actor[:image_url]}"%>></td>
+          <td> <img src=<%="#{actor[:image_url]}"%> height='300' width='210'></td>
           <td><%= actor[:name]%></td>
           <td><%= actor[:bio]%></td>
           <td><%= actor[:birth_date]%></td>
@@ -29,3 +29,6 @@
         <% end %>
       </tbody>
     </table>
+    <form action="/new" method="get">
+      <input type="submit" name="submit" value="crear actor">
+    </form>
