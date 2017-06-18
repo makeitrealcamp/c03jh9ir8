@@ -1,11 +1,11 @@
 class ActorsController < ApplicationController
-  def actors
+  def index
     @actors = Actor.all
   end
   def new
     @actor = Actor.new
   end
-  def crear
+  def create
     actor = params.require(:actor)
     .permit(:name, :bio, :birth_date, :birth_date, :death_date, :death_place, :image_url)
     @actor = Actor.new actor
