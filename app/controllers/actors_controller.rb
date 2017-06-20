@@ -4,43 +4,26 @@ class ActorsController < ApplicationController
     @actores = Actor.all
   end
 
-  def new
-
+  def show
+    @actors = Actor.all
   end
 
-  def guardar
-    # actores = params
-    #   .require(:actor)
-    #   .permit(:name, :bio, :birth_date, :birth_place, :image_url, :alive, :death_date, :death_place)
+  def new
+    @actor = Actor.new
+  end
 
-    #   @sactores = Actor.new actores
+  def create
+    @actor = Actor.new(actor_params)
+    if @actor.save
+      redirect_to(actors_path)
+    else
+     @errors = @actor.errors.full_messages
+      render "actors/new"
+    end
+  end
 
-
-
-    #   if @sactores.save
-    #     redirect_to actor_path(@actor)
-    #   else 
-    #     render :index
-    #   end
-
-
-      @name = params[:nombre]
-      @bio = params[:bio]
-      @birth_date = params[:fnaniciento]
-      @birth_place = params[:lnacimiento]
-      @image_url = params[:foto]
-      @death_date = params[:ffallecimiento]
-      @death_place = params[:lfallecimiento]
-
-      actores = Actor.new name: @name, bio: @bio, birth_date: @birth_date, birth_place: @birth_place, image_url: @image_url, death_date: @death_date, death_place: @death_place
-            
-      if actores.save
-        redirect_to actors_path
-      else 
-        redirect_to actors_new_path
-      end
-
-    
+  def actor_params    
+    params.require(:actor).permit(:name, :bio, :birth_date, :birth_place, :image_url, :alive, :death_date, :death_place)
   end
 
 end
