@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
 get '/actors', to: 'actors#index'
+get '/actors/crear', to: 'actors#crear'
+post '/actors/crear', to: 'actors#guardar'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

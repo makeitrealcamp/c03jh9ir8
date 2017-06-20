@@ -1,0 +1,33 @@
+<form action="/actors/crear" method="POST">
+
+<label for="foto">Foto
+  <input type="text" name="foto">
+</label>
+<br>
+<label for="nombre">Nombre
+  <input type="text" name="nombre">
+</label>
+<br>
+<label for="bio">Bio
+  <input type="text" name="bio">
+</label>
+<br>
+<label for="fnaniciento">Fecha de Nacimiento
+  <input type="text" name="fnaniciento">
+</label>
+<br>
+<label for="lnacimiento">Lugar de Nacimiento
+  <input type="text" name="lnacimiento">
+</label>
+<br>
+<label for="fallecimiento">Fecha Fallecimiento
+  <input type="text" name="ffallecimiento">
+</label>
+<label for="fallecimiento">Lugar Fallecimiento
+  <input type="text" name="lfallecimiento">
+</label>
+<br>
+<input type="submit" value="Enviar">
+<%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+
+</form>
