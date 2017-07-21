@@ -1,0 +1,50 @@
+<h1>Crear Actor</h1>
+
+<%= form_for @actor do |f| %>
+  <div>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+
+  <div>
+    <%= f.label :biography %><br>
+    <%= f.text_area :bio, rows: 5 %>
+  </div>
+
+  <div>
+    <%= f.label :image_url %><br>
+    <%= f.url_field :image_url %>
+  </div>
+
+  <div>
+    <%= f.label :birth_place %><br>
+    <%= f.text_field :birth_place %>
+  </div>
+
+  <div>
+    <%= f.label :birth_date %><br>
+    <%= f.text_field :birth_date %>
+  </div>
+  
+  <div>
+    <p>Alive?</p>
+    <%= f.radio_button :alive, true, checked: true %>
+    <%= f.label :alive_yes, "Yes" %>
+    <%= f.radio_button :alive, false %>
+    <%= f.label :alive_no, "No" %>
+  </div>
+
+  <div>
+    <%= f.label :death_date %><br>
+    <%= f.text_field :death_date %>
+  </div>
+
+  <div>
+    <%= f.label :death_place %><br>
+    <%= f.text_field :death_place %>
+  </div>
+  
+  <%= f.submit %>
+<% end %>
+
+<p><%= link_to "Regresar", actors_path %></p>
