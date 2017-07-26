@@ -16,7 +16,7 @@ class ActorsController < ApplicationController
 
 		actor = Actor.new(actor_params)
 		if actor.save 
-			redirect_to index_actor_path(actor)
+			redirect_to index_actor_path
 		else
 			render :new
 		end
