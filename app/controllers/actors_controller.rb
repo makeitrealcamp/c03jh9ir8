@@ -1,6 +1,6 @@
 class ActorsController < ApplicationController
 
-	def show
+	def index
 
 		@actors = Actor.all 
 
@@ -16,7 +16,7 @@ class ActorsController < ApplicationController
 
 		actor = Actor.new(actor_params)
 		if actor.save 
-			redirect_to show_actor_path(actor)
+			redirect_to index_actor_path(actor)
 		else
 			render :new
 		end
