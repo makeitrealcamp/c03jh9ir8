@@ -14,7 +14,7 @@ class ActorsController < ApplicationController
         if @actors.save
             redirect_to actors_path, flash: { success: 'The post has been created' }
         else
-            render :index
+            render :new
         end
     end
 
