@@ -1,4 +1,7 @@
 <h1>Actores</h1>
+
+<h1><%= link_to "Create new actor", actors_new_path %></h1>
+
 <% @actors.each do |item| %>
 <div>
 <% if item.alive == true %>
@@ -15,7 +18,6 @@
 <h4><%= item.birth_place %></h4>
 <h4><%= item.death_date %></h4>
 <h4><%= item.death_place %></h4>
-
 <%end%>
 </div>
 <% end %>
