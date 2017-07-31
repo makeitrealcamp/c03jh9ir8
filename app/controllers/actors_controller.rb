@@ -8,7 +8,7 @@ class ActorsController < ApplicationController
     end
     def create
         #@actor = current_user.posts.new(post_params)
-         @actors = Actor.new(post_params)
+        @actors = Actor.new(post_params)
         # @post.user_id = current_user.id
 
         if @actors.save
