@@ -1,6 +1,6 @@
 <h1>Actores</h1>
 
-<h1><%= link_to "Crear Actor", new_polymorphic_path  %></h1>
+<h1><%= link_to "Crear Actor", actors_new_path  %></h1>
 <% @actors.each do |item| %>
 <div>
 <% if item.alive == true %>
