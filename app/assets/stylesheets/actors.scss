@@ -1,3 +1,13 @@
 // Place all the styles related to the Actors controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.profile-picture{
+  width: 4em;
+  
+}
+.profile-picture img{
+  border-radius:  40px;
+  border-color: #444;
+  border-style:  solid;
+  border-width: 1px;
+}

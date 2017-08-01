@@ -13,3 +13,7 @@
  *= require_tree .
  *= require_self
  */
+@import "bulma";
+#app{
+  margin-top: 1.6em;
+}
