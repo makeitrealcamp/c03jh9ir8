@@ -1,9 +1,6 @@
-<!--
-
-Fecha de Nacimiento.
-Lugar de Nacimiento.
-
--->
+<%content_for :menuItems do%>
+  <%= link_to  "New Actor", new_actor_url, class: "navbar-item is-hidden-desktop-only" %>
+<%end%>
 <div class="columns is-multiline">
   <%@actors.each do |actor|%>
     <div class="column is-4">

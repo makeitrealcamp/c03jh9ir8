@@ -7,7 +7,7 @@
 
   <div id="navMenuExample" class="navbar-menu">
     <div class="navbar-end">
-      <%= link_to  "New Actor", new_actor_url, class: "navbar-item is-hidden-desktop-only" %>
+      <%=yield :menuItems%>
     </div>
   </div>
 </nav>
