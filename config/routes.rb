@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
-  get '/actors', to: 'actors#index'
+  resources :actors, only: [:index,:create,:new]
 
 end
