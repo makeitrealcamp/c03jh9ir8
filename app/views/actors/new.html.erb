@@ -1,0 +1,66 @@
+<%content_for :menuItems do%>
+  <%= link_to  "Back", root_path, class: "navbar-item is-hidden-desktop-only" %>
+<%end%>
+<% content_for :head do %>
+<% end %>
+<div class="has-text-centered">
+  <p class="title">New Actor</p>
+</div>
+<%=form_for @actor do |f|%>
+  <div class="field">
+    <%= f.label :name, class: "label" %>
+    <div class="control">
+      <%= f.text_field :name, class: "input" %>
+    </div>
+  </div>
+  <div class="field">
+    <%= f.label :bio, class: "label" %>
+    <div class="control">
+      <%= f.text_area :bio, class: "textarea"%>
+    </div>
+  </div>
+  <div class="field">
+    <%= f.label :birth_date, class: "label" %>
+    <div class="control">
+      <%=date_field("actor", "birth_date", class:"input")%>
+    </div>
+  </div>
+  <div class="field">
+    <%= f.label :birth_place, class: "label" %>
+    <div class="control">
+      <%= f.text_field :birth_place, class: "input" %>
+    </div>
+  </div>
+  <div class="field">
+    <%= f.label :image_url, class: "label" %>
+    <div class="control">
+      <%= f.text_field :image_url, class: "input" %>
+    </div>
+  </div>
+  <div class="field">
+  <div class="control">
+    <label class="checkbox">
+      Alive?
+      <%= f.check_box :alive, class: "checkbox" %>
+    </label>    
+  </div>
+  <div class="field alive">
+    <%= f.label :death_date, class: "label" %>
+    <div class="control">
+      <%=date_field("actor", "death_date", class:"input")%>
+    </div>
+  </div>
+  <div class="field alive">
+    <%= f.label :death_place, class: "label" %>
+    <div class="control">
+      <%= f.text_field :death_place, class: "input" %>
+    </div>
+  </div>
+  <div class="field is-grouped">
+    <%= f.submit 'Save' , class: "button is-primary"%>
+  </div>
+
+</div>
+
+</div>
+<%end%>

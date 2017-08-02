@@ -11,6 +11,12 @@
 // about supported directives.
 //
 //= require jquery
-//= require jquery_ujs
 //= require turbolinks
+//= require_self
 //= require_tree .
+
+window.onLoad = function(callback) {
+  // binds ready event and turbolink page:load event
+  $(document).ready(callback);
+  $(document).on('page:load',callback);
+};
