@@ -1,6 +1,8 @@
 <%content_for :menuItems do%>
   <%= link_to  "Back", root_path, class: "navbar-item is-hidden-desktop-only" %>
 <%end%>
+<% content_for :head do %>
+<% end %>
 <div class="has-text-centered">
   <p class="title">New Actor</p>
 </div>
@@ -42,13 +44,13 @@
       <%= f.check_box :alive, class: "checkbox" %>
     </label>    
   </div>
-  <div class="field">
+  <div class="field alive">
     <%= f.label :death_date, class: "label" %>
     <div class="control">
       <%=date_field("actor", "death_date", class:"input")%>
     </div>
   </div>
-  <div class="field">
+  <div class="field alive">
     <%= f.label :death_place, class: "label" %>
     <div class="control">
       <%= f.text_field :death_place, class: "input" %>
