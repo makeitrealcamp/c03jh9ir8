@@ -1,0 +1,45 @@
+    <div class="col-xs-10">
+      <h3>Informacion Sobre el Actor</h3>
+    </div>
+  <div class="row">
+    <%= form_for @actores do |f| %>
+    <div class="form-group">
+      <%= f.label :name, "Nombre" %>
+      <%= f.text_field :name, class: "form-control", placeholder: "nombre completo" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :bio, "Biografia" %>
+      <%= f.text_area :bio, class: "form-control ", placeholder: "Biografia" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :birth_date , "Fecha de Nacimiento " %>
+      <%= f.date_field :birth_date, class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :birth_place, "Lugar de Nacimiento" %>
+      <%= f.text_field :birth_place, class: "form-control", placeholder: "Lugar de Nacimiento" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :image_url, "Imagen URL" %>
+      <%= f.url_field :image_url, class: "form-control", placeholder: "Imagen URL" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :alive, '¿Esta vivo ?' %> <br/>
+      <%= f.label :alive, 'Si' %>
+      <%= f.radio_button :alive, true , :checked => true%>
+      <%= f.label :alive, 'No' %>
+      <%= f.radio_button :alive, false%>
+    </div>
+    <div class="form-group">
+      <%= f.label :death_date, "Fecha de Fallecimiento " %>
+      <%= f.date_field :death_date, class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :death_place, "Lugar de Fallecimiento" %>
+      <%= f.text_field :death_place, class: "form-control", placeholder:"Lugar de Fallecimiento" %>
+    </div>
+    <div>
+      <%= f.submit "Crear Actor" , class: "btn btn-primary" %>
+    </div>
+    <% end %>      
+    </div>
