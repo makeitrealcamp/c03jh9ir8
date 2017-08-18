@@ -3,7 +3,7 @@ class ActorsController < ApplicationController
    @actores = Actor.all
   end
   def create
-  @actores = Actor.new(ac_params)
+  @actores = Actor.new(actor_params)
   if @actores.save
     redirect_to actors_path
   else
