@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get 'actors/'  => 'actors#index'
   get  'actors/new', to: 'actors#new', as: :new_actors
   post 'actors/' =>  'actors#create'
+  
   root 'actors#index'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
