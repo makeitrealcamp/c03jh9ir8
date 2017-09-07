@@ -1,0 +1,21 @@
+<h1>Actores</h1>
+<h1><%= link_to "Crear Actor", new_actors_path  %>.</h1>
+<% @actors.each do |item| %>
+<div>
+<% if item.alive == true %>
+<img src="<%= item.image_url %>" alt="Smiley face">
+<h2><%= item.name %></h2>
+<p><%= item.bio %></p>
+<h4><%= item.birth_date %></h4>
+<h4><%= item.birth_place %></h4>
+<% else %>
+<img src="<%= item.image_url %>" alt="Smiley face">
+<h2><%= item.name %></h2>
+<p><%= item.bio %></p>
+<h4><%= item.birth_date %></h4>
+<h4><%= item.birth_place %></h4>
+<h4><%= item.death_date %></h4>
+<h4><%= item.death_place %></h4>
+<%end%>
+</div>
+<% end %>
