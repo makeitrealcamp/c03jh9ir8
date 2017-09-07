@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   #   get 'products/:id' => 'catalog#view'
 
   get 'actors/'  => 'actors#index'
-  get  'actors/new', to: 'actors#new',   as: :new_actors
+  get  'actors/new', to: 'actors#new', as: :new_actors
   post 'actors/' =>  'actors#create'
   root 'actors#index'
 
