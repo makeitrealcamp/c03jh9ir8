@@ -1,28 +1,30 @@
-			<div class="jumbotron">
-				<h1 class="jumbotron-fluid text-center display-3">Actores</h1>
+<div class="jumbotron">
+	<h1 class="jumbotron-fluid text-center display-3">Actores</h1>
+</div>
+<div class="text-right">
+  <%= link_to "Crear actor", new_actor_path, class: "btn btn-primary" %>
+</div>
+<% @actors.each do |actor| %>
+	<div class="container">
+		<div class="col-sm-4" id="image_actor"><%= image_tag actor.image_url %></div>
+		<div class="col-sm-8">
+			<div class="row">
+				<h3><%= actor.name %></h3>
 			</div>
-
-			<% @actors.each do |actor| %>
-				<div class="container">
-					<div class="col-sm-4"><%= image_tag actor.image_url %></div>
-					<div class="col-sm-8">
-						<div class="row">
-							<h3><%= actor.name %></h3>
-						</div>
-						<div class="row">
-							<div class="col-sm-6 alert alert-ligth">
-								<span><%= actor.birth_place %></span></br>
-								<small><%= actor.birth_date %></small>
-							</div>
-							<% if actor.death_date? %>
-								<div class="col-sm-6 alert alert-ligth">
-									<span><%= actor.death_place %></span></br>
-									<small><%= actor.death_date %></small>
-								</div>
-							<% end %>
-						</div>
-						<div class="row"><p><%= actor.bio %></p></div>
-					</div>
+			<div class="row">
+				<div class="col-sm-6 alert alert-ligth">
+					<span><%= actor.birth_place %></span></br>
+					<small><%= actor.birth_date %></small>
 				</div>
-				<hr>
-			<% end %>
+				<% if actor.death_date? %>
+					<div class="col-sm-6 alert alert-ligth">
+						<span><%= actor.death_place %></span></br>
+						<small><%= actor.death_date %></small>
+					</div>
+				<% end %>
+			</div>
+			<div class="row"><p><%= actor.bio %></p></div>
+		</div>
+	</div>
+	<hr>
+<% end %>
