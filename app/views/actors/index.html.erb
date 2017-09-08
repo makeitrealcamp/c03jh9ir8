@@ -2,6 +2,7 @@
   <% @actors.each do |actor| %>
   <li> <%= link_to actor.name, actor_path(actor) %> </li>
   <% end %>
+  <%= link_to "Crear Actor", new_actor_path %>
 </ul>
 
-<%= link_to "Crear Actor", new_actor_path %>
+
