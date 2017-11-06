@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  get '/', to: 'actors#index'
+  get '/actors', to: 'actors#index'
 end
