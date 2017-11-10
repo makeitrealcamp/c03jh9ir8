@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div class="content">
+    <h1>Actores</h1>
+    <table class="table">
+      <tr>
+        <th>Foto</th>
+        <th>Nombre</th>
+        <th class="bio">Bio</th>
+        <th>Fecha de Naciemiento</th>
+        <th>Lugar de Naciemiento</th>
+        <th>Esta vivo?</th>
+        <th>Fecha de Muerte</th>
+        <th>Lugar de Muerte</th>
+
+      </tr>
+      <% @actors.each do |a| %>
+        <tr>
+          <td><img class="images"src="<%=a.image_url%>" alt="<%= a.name %>"></td>
+          <td><%= a.name %></td>
+          <td><%= a.bio %></td>
+          <td><%= a.birth_date %></td>
+          <td><%= a.birth_place %></td>
+          <% if a.alive == true %>
+            <td>--</td>
+            <td>--</td>
+            <td>--</td>
+          <% else %>
+            <td><%= a.alive %></td>
+            <td><%= a.death_date %></td>
+            <td><%= a.death_place %></td>
+          <% end %>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+</body>
+</html>
