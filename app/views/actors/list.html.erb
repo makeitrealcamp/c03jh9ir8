@@ -1,0 +1,13 @@
+<% (1..@actors_num).each do |i| %>
+  <br>
+  <img src="<%= @actors.find(i).image_url %>" alt="">
+  <br>
+  <h1><%= @actors.find(i).name %></h1>
+  <p>Bio: <%= @actors.find(i).bio %></p>
+  <p>Fecha de nacimiento: <%= @actors.find(i).birth_date %></p>
+  <p>Lugar de nacimiento: <%= @actors.find(i).birth_place %></p>
+  <% if !@actors.find(i).alive %>
+    <p>Fecha de defunción: <%= @actors.find(i).death_date %></p>
+    <p>Lugar de defunción: <%= @actors.find(i).death_place %></p>
+  <% end %>
+<% end %>
