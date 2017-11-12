@@ -1,13 +1,13 @@
-<% (1..@actors_num).each do |i| %>
-  <br>
-  <img src="<%= @actors.find(i).image_url %>" alt="">
-  <br>
-  <h1><%= @actors.find(i).name %></h1>
-  <p>Bio: <%= @actors.find(i).bio %></p>
-  <p>Fecha de nacimiento: <%= @actors.find(i).birth_date %></p>
-  <p>Lugar de nacimiento: <%= @actors.find(i).birth_place %></p>
-  <% if !@actors.find(i).alive %>
-    <p>Fecha de defunción: <%= @actors.find(i).death_date %></p>
-    <p>Lugar de defunción: <%= @actors.find(i).death_place %></p>
-  <% end %>
+<% @actors.each do |actor| %>
+  <div>
+    <img src="<%= actor.image_url %>" alt="actor.name">
+    <h3><%= actor.name %></h3>
+    <p><%= actor.bio %></p>
+    <p><strong>Fecha de nacimiento: </strong><%= actor.birth_date %></p>
+    <p><strong>Lugar de nacimiento: </strong><%= actor.birth_place %></p>
+    <% if !actor.alive %>
+      <p><strong>Fecha de defunción: </strong><%= actor.death_date %></p>
+      <p><strong>Lugar de defunción: </strong><%= actor.death_place %></p>
+    <% end %>
+  </div>
 <% end %>
