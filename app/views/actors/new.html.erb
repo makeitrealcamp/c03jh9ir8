@@ -1,0 +1,11 @@
+<h2>Ingresa los datos del actor</h2>
+<%= form_for  @actor do |f| %>
+  <p>Nombre</p> <%= f.text_field :name %> <br>
+  <p>URL de la foto</p> <%= f.text_field :image_url %> <br>
+  <p>Bio</p> <%= f.text_area :bio, :size => "60x5" %> <br>
+  <p>Fecha de nacimiento</p> <%= f.text_field :birth_date %> <br>
+  <p>Lugar de nacimiento</p> <%= f.text_field :birth_place %> <br>
+  <p>Fecha de defunción</p> <%= f.text_field :death_date %> <br>
+  <p>Lugar de defunción</p> <%= f.text_field :death_place %> <br><br>
+  <%= submit_tag "Crear" %>
+<% end %>
