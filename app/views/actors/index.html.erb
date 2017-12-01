@@ -1,9 +1,9 @@
 <h2>Estos son los actores de Prisma comunicaciones:</h2>
 
-
+<%= link_to 'Crear Actor', new_actor_path %>
 
 <ul> <% @actors.each do |actor| %>
-	<h1> <%= actor.alive %>
+
 	<% if (actor.alive) %>
 		<table>
 		<tr>
@@ -15,7 +15,7 @@
 		</tr>
 		<tr>
 			<td>
-				<img src=<%= actor.image_url  %> alt="Pic of the actor">
+				<img src=<%= actor.image_url  %> alt="Pic of the actor" width="100px">
 			</td>
 			<td>
 				<%= actor.name  %>
@@ -42,7 +42,7 @@
 		</tr>
 		<tr>
 			<td>
-				<img src=<%= actor.image_url  %> alt="Pic of the actor">
+				<img src=<%= actor.image_url  %> alt="Pic of the actor" width="100px">
 			</td>
 			<td>
 				<%= actor.name  %>
