@@ -1,0 +1,22 @@
+
+<h1>Crea un nuevo actor:</h1>
+
+<form>
+	<action="/actors" method= "GET">
+	name:<br>
+	<input type="text" name="actor[name]"><br>
+	biografia:<br>
+	<input type="text" name="actor[bio]"><br>
+	Fecha de nacimiento:<br>
+	<input type="text" name="actor[birth_date]"><br>
+	Lugar de nacimiento:<br>
+	<input type="text" name="actor[birth_place]"><br>
+	Esta vivo?:<br>
+	<input type="text" name="actor[alive]"><br>
+	Fecha del fallecimiento:<br>
+	<input type="text" name="actor[death_date]"><br>
+	Lugar del fallecimiento<br>
+	<input type="text" name="actor[death_place]"><br>
+</form>
+     
+     <%= link_to 'Actores', actors_path %>
