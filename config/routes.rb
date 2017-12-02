@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
-  get '/actors', to: 'actors#index'
+  get '/actors', to: 'actors#index', as: 'actors'
 
+  get '/actors/new', to: 'actors#new', as: 'actor_new'
+
+  post '/actors', to: 'actors#create'
+  
+  #patch '/actors'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
