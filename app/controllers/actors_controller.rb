@@ -9,7 +9,6 @@ class ActorsController < ApplicationController
 	# end
 
 	def new	
-		 # @actor = Actor.new
 	end
 
 	def create
