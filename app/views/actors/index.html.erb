@@ -1,4 +1,4 @@
-<%= link_to 'Crear Actor', '/actors/new' %>
+<%= link_to 'Crear Actor', 'new_actor_path' %>
 <% @actors.each do |actor|%>
 <h1><%= image_tag actor.image_url %></h1>
 <h1><%= actor.name %></h1>
