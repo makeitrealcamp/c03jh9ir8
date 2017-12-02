@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   post '/actors', to: 'actors#create'
 
-  get '/new_actor_path', to: 'actors#new' 
+  get '/actors', to: 'actors#index' 
 
 end
 
