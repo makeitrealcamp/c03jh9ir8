@@ -1,8 +1,19 @@
 
 <h1>Crea un nuevo actor:</h1>
 
-<form>
-	<action="/actors" method= "GET">
+
+	<%= form_for :actor do |f| %>
+		nombre: </br><%= f.text_field :name %></br>
+		biografia: </br><%= f.text_area :bio %></br>
+		Imagen: </br><%= f.text_field :image_url %></br>
+		Fecha de nacimiento: </br><%= f.text_field :birth_date %></br>
+		Lugar de nacimiento: </br><%= f.date_field :birth_place %></br>
+		Esta vivo: </br><%= f.text_field :alive %></br>
+		Fecha del fallecimiento: </br><%= f.date_field :death_date %></br>
+		Lugar del fallecimiento: </br><%= f.text_field :death_place %></br>
+		<%= f.submit%>
+	<% end %>
+<!--  <form action = "/actors" method= "POST">
 	name:<br>
 	<input type="text" name="actor[name]"><br>
 	biografia:<br>
@@ -17,6 +28,8 @@
 	<input type="text" name="actor[death_date]"><br>
 	Lugar del fallecimiento<br>
 	<input type="text" name="actor[death_place]"><br>
-</form>
+	<input type="submit" value= "Enviar">
+</form> -->
      
+
      <%= link_to 'Actores', actors_path %>
