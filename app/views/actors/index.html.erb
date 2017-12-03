@@ -7,7 +7,10 @@
 <p><%= actor.birth_date %></p>
 <p><%= actor.birth_place %></p>
 <% if(actor.alive != true) %>
-<p>holiii</p>
+<p>Deat Date: <%= actor.death_date %></p>
+<p>Deat Place: <%= actor.death_place %></p>
 <% end %>
 <% end %>
 </ul>
+
+<h2><%= link_to "Crear Actor", new_actor_path %></h2>
