@@ -8,5 +8,16 @@ class ActorsController < ApplicationController
 	end
 
 	def create
+		@actor = Actor.create(strongParams)
+		puts @actor
+		redirect_to '/actors'
+ 	end
+
+	private
+	def strongParams
+		params.require(:actor).permit(:name, :bio, :birth_date, :birth_place, :alive, :death_date, :death_place)
+		
 	end
+
+	
 end
