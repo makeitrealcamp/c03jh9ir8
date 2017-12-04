@@ -2,7 +2,7 @@
 <h1>Crea un nuevo actor:</h1>
 
 
-	<%= form_for :actor do |f| %>
+	<%= form_for @actor do |f| %>
 		nombre: </br><%= f.text_field :name %></br>
 		biografia: </br><%= f.text_area :bio %></br>
 		Imagen: </br><%= f.text_field :image_url %></br>
