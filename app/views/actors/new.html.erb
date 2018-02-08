@@ -1,0 +1,13 @@
+<h1>Crear Actor</h1>
+<ul>
+	<%= form_for @actor do |act| %>
+	<h3>Nombre</h3><%= act.text_field :name %>
+	<h3>Bio</h3><%= act.text_field :bio %>
+	<h3>Fecha de Nacimiento</h3><%= act.text_field :birth_date %>
+	<h3>Lugar de Nacimiento</h3><%= act.text_field :birth_place %>
+	<h3>Foto:</h3><%= act.text_field :image_url %>
+	<h3>Fecha de Fallecimiento:</h3><%= act.text_field :death_date %>
+	<h3>Sitio de Fallecimiento</h3><%= act.text_field :death_place %>
+	<%= act.submit %>
+	<% end %>
+</ul>
