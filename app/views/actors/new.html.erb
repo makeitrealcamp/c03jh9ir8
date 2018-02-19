@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6 col-sm-offset-3">
+      <h1>Publicar Actor</h1>
+      <%= form_for @actor do |actor| %>
+        <div class="form-group">
+          <%= actor.text_field :name, class: "form-control input-lg", placeholder: "Ingresa el nombre del actor" %>
+        </div>
+        <div class="form-group">
+          <%= actor.url_field :image_url, class: "form-control input-lg", placeholder: "Ingresa la URL del actor" %>
+        </div>
+        <div class="form-group">
+          <%= actor.text_area :bio, class: "form-control input-lg", placeholder: "Ingresa la descripción del actor" %>
+        </div>
+        <div>
+          <%= actor.submit "Publicar Actor", class: "btn btn-primary btn-lg btn-block" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
