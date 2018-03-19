@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   get '/' => 'actors#index'
+  get '/actors' => 'actors#index'
 
 
 
