@@ -1,0 +1,8 @@
+<%= form_for @actor do |f| %>
+  name: <%= f.text_field :name %><br />
+  Biography : <%= f.text_area :bio %><br />
+  fecha de nacimiento : <%= f.text_field :birth_date %><br />
+  lugar de nacimiento : <%= f.text_field :birth_place %><br />
+  esta vivo? si o no  : <%= f.check_box :alive %><br />
+  <%= f.submit %>
+<% end %>

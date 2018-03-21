@@ -1,0 +1,49 @@
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+<div>
+	<%=link_to 'Crear Actor', actors_new_path %>
+</div>
+<table cellspacing="50">
+	<tr>
+		<th>foto</th>
+		<th>name</th>
+		<th>bio</th>
+		<th>birth_date</th>
+		<th>birth_place</th>
+		<th>death_date</th>
+		<th>death_place</th>
+	</tr>
+	<% @actors.each do |actor| %>
+	<tr>
+		<td> <img src=" <%= actor.image_url %>" alt=""> </td>
+		<td><%= actor.name %></td>
+		<td><%= actor.bio %></td>
+		<td><%= actor.birth_date %></td>
+		<td><%= actor.birth_place %></td>
+		<% if !actor.alive%>
+			<td><%= actor.death_date %></td>
+			<td><%= actor.death_place %></td>
+		<% else %>
+			<td>vivo y coleando</td>
+			<td>vivo y coleando</td>
+		<% end %>
+
+		
+	</tr>
+	<% end %>
+</table>
