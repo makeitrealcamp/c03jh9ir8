@@ -1,6 +1,6 @@
 
     <% @actores.each do |element| %>
-    <table>
+    <table style="width:70%">
     <tr>
       <th><h3>FOTO</h3></th>
       <th><h3>DATOS DEL ACTOR</h3></th>
@@ -17,3 +17,5 @@
         <h3>Lugar de Fallecimiento: </h3><p><%= element.death_place %>></p>
         <% end %></td>
     <% end %></tr></table>
+
+    <a href='/new'><h2>Crear Actor</h2></a>

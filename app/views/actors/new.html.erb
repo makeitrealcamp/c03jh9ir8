@@ -1,0 +1,41 @@
+      <h1>Crear Actor</h1>
+      <%= form_for @actores do |a| %>
+
+        <div>
+        <%= a.label :name %>
+        <%= a.text_field :name%>
+      </div><br>
+        <div>
+          <%= a.label :bio %>
+          <%= a.text_area :bio%>
+        </div><br>
+        <div>
+          <%= a.label :birth_date %>
+          <%= a.date_select :birth_date%>
+        </div><br>
+        <div>
+          <%= a.label :birth_place %>
+          <%= a.text_field :birth_date%>
+        </div><br>
+        <div>
+          <%= a.label :image_url %>
+          <%= a.url_field :image_url%> <!--Campo de Url-->
+        </div><br>
+        <div>
+          <%= a.label :alive %>?
+          <%= a.label :alive, "Yes", :value => "true"  %>
+          <%= a.radio_button :alive, true %>
+          <%= a.label :alive, "No", :value => "false" %>
+          <%= a.radio_button :alive, false, :checked => true %>
+        </div><br>
+        <div>
+          <%= a.label :death_date %>
+          <%= a.date_select :death_date%>
+        </div><br>
+        <div>
+          <%= a.label :death_place %>
+          <%= a.text_field :death_place%>
+        </div><br>
+
+        <%= a.submit %>
+        <% end %>
