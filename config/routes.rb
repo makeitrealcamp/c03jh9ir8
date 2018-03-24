@@ -2,7 +2,8 @@ Rails.application.routes.draw do
 
   get '/' => 'actors#index'
   get '/actors' => 'actors#index'
-  get 'new' => 'actors#new'
+  get '/new' => 'actors#new'
+  get '/actors/new' => 'actors#new'
 
   resources :actors
 
