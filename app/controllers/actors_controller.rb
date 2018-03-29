@@ -9,8 +9,12 @@ def new
 end
 
 def create
-  @actores = Actor.create(actors_params)
-  redirect_to actors_path(@actores)
+  @actores = Actor.new(actors_params)
+  if @actores.save
+    redirect_to actors_path(@actores)
+  else
+    render :new
+  end
 end
 
 private
