@@ -11,7 +11,7 @@ end
 def create
   @actores = Actor.new(actors_params)
   if @actores.save
-    redirect_to actors_path(@actores)
+    redirect_to actors_path
   else
     render :new
   end
