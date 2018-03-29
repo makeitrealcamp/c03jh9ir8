@@ -1,0 +1,83 @@
+[33mcommit d83dc8a919cf19b8e2f3e4b6118f1194f4ec869b[m
+Author: capaisa12 <capaisa12@gmail.com>
+Date:   Thu Mar 29 11:31:08 2018 -0500
+
+    Se hace modificaciones en las rutas
+
+[33mcommit 1bb78ffbc2c037e9949f515f2d7cec45a85abfa9[m
+Author: capaisa12 <capaisa12@gmail.com>
+Date:   Wed Mar 28 22:53:39 2018 -0500
+
+    Se le asigna ruta actors/new
+
+[33mcommit 4e3c67ed45f1647409c483e7351ac38841c4ec66[m
+Author: capaisa12 <capaisa12@gmail.com>
+Date:   Wed Mar 28 22:49:46 2018 -0500
+
+    Se arregla error de registro
+
+[33mcommit f6246f2cff7d25ff6d1aa35db0223a5e38ac1060[m
+Author: capaisa12 <capaisa12@gmail.com>
+Date:   Fri Mar 23 20:51:22 2018 -0500
+
+    Commit agregandole ruta de actores
+
+[33mcommit e94e5a143f09634b49a04122891c9da745bb6d19[m
+Author: capaisa12 <capaisa12@gmail.com>
+Date:   Fri Mar 23 20:43:57 2018 -0500
+
+    Commit a la rama crear-actores
+
+[33mcommit 46d844176cac930a67a6c32cf5e4190fbed59dc9[m
+Author: capaisa12 <capaisa12@gmail.com>
+Date:   Mon Mar 19 15:27:23 2018 -0500
+
+    Se le arregla la ruta actors que estaba faltando
+
+[33mcommit 969047cdff9e61c943e965818121009a9a33bdfb[m
+Author: capaisa12 <capaisa12@gmail.com>
+Date:   Mon Mar 19 15:16:52 2018 -0500
+
+    Se le hacen las modificaciones solicitadas en el reto 3 de Ruby and rails
+
+[33mcommit 0fe96f3548b32424fa6a30f3aa5346baafae4843[m
+Author: juan267 <j.gomez267@gmail.com>
+Date:   Tue Apr 18 14:16:05 2017 -0500
+
+    update rails version
+
+[33mcommit b2eae577a7a29bfdde2cb13f4132913dfa81426b[m
+Author: juan267 <j.gomez267@gmail.com>
+Date:   Sun Jun 19 12:05:25 2016 -0500
+
+    fix gemfile versions
+
+[33mcommit f9933fd8f8d47c1745782dd71530481ee1e7fc47[m
+Author: juan267 <j.gomez267@gmail.com>
+Date:   Thu Jun 16 22:53:46 2016 -0500
+
+    gem updates
+
+[33mcommit daa2de20d40f674704798c9211689c8ca7965a8b[m
+Author: German Escobar <german.escobarc@gmail.com>
+Date:   Sat May 9 21:49:41 2015 -0500
+
+    Create controller for actors
+
+[33mcommit b25abaac008518e082d279f95cd84ac64a20da58[m
+Author: German Escobar <german.escobarc@gmail.com>
+Date:   Sat May 9 21:48:48 2015 -0500
+
+    Add seed data
+
+[33mcommit 42e827e4e1a5f111c312bf66893e1b9312726d75[m
+Author: German Escobar <german.escobarc@gmail.com>
+Date:   Sat May 9 21:26:49 2015 -0500
+
+    Create Actor model
+
+[33mcommit d076c931b9a79f8010ad210be57774c94d04bbeb[m
+Author: German Escobar <german.escobarc@gmail.com>
+Date:   Sat May 9 21:11:52 2015 -0500
+
+    Initial import
