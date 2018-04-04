@@ -1,0 +1,19 @@
+<%= form_for @actor, url: actors_path, method: "post" do |actor|%>
+  <%= actor.text_field :name, placeholder: "Nombre" %><br>
+  <br>
+  <%= actor.text_field :image_url, placeholder: "Imagen" %><br>
+  <br>
+  <%= actor.text_field :bio, placeholder: "Biografia" %><br>
+  <br>
+  <label for="birth_date">Fecha de nacimiento</label>
+  <%= actor.date_field :birth_date, id: "birth_date"%><br>
+  <br>
+  <%= actor.text_field :birth_place, placeholder: "Lugar de nacimiento" %><br>
+  <br>
+  <label for="death_date">Fecha de fallecimiento</label>
+  <%= actor.date_field :death_date %><br>
+  <br>
+  <%= actor.text_field :death_place, placeholder: "Lugar de fallecimiento"%><br>
+  <br>
+  <%= actor.submit "Crear Actor"%>
+<% end %>
