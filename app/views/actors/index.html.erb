@@ -1,3 +1,8 @@
+<h1>Actores</h1>
+
+<%= link_to 'Crear Actor', new_actor_path %>
+
+
 <table>
   <tr>
     <th>Foto</th>
@@ -9,7 +14,7 @@
     <th>Lugar de Fallecimiento</th>
   </tr>
   <% @actors.each do |actors| %>
-    <tr>      
+    <tr>
       <td><img src="<%= actors.image_url %>" alt=""></td>
       <td><%= actors.name %></td>
       <td><%= actors.bio %></td>
