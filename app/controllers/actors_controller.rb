@@ -6,9 +6,9 @@ class ActorsController < ApplicationController
     @actor = Actor.new
   end
   def create
-    @actor = Actor.new
+    @actor = Actor.new(actor_params)
     if @actor.save
-      redirect_to actors_path(actor_params)
+      redirect_to actors_path
     else
       render :new
     end
