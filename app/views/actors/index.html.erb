@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+
+<body>
+
+
+<div class="container">
+
+
+<table class="table table-bordered">
+
+
+<thead>
+    <tr>
+        <th scope="col">Picture</th>
+        <th scope="col">NAME</th>
+        <th scope="col">BIO </th>
+        <th scope="col">BIRTHDATE</th>
+        <th scope="col">BIRTHPLACE</th>
+        <th scope="col">DEATHDATE</th>
+        <th scope="col">DEATHPLACE</th>
+          
+        
+
+    </tr>
+
+
+
+
+
+</thead>
+
+
+<tbody>  
+<% @actor.each do |field| %>
+<tr>
+    <td scope="row"><img src= <%= field.image_url %> class="rounded float-left" > </td>
+    <td scope="row"><%= field.name %> </td>
+    <td scope="row" ><%= field.bio %> </td>
+    <td scope="row"><%= field.birth_date %> </td>
+    <td scope="row"><%= field.birth_place %> </td>
+    <td scope="row"><%= field.death_place %> </td>
+    <td scope="row"><%= field.death_date %> </td>
+
+
+
+</tr>
+
+  
+
+
+
+<% end %>  
+  </tbody>  
+</table>
+
+<div class="text-right">
++      <%= link_to "Crear Actor", new_actor_path, class: "btn btn-success" %>
++    </div>
+
+</div>
+</body>
+</html>
