@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4 col-sm-offset-4">
+      <h1>Ingresa un nuevo actor</h1>
+      <%= form_for @actor do |f| %>
+        <div class="form-group">
+          <%= f.text_field :name, placeholder: "Nombre", class: "form-control input-lg" %>
+        </div>
+        <div class="form-group">
+          <%= f.text_area :bio, placeholder: "Biografia", class: "form-control input-lg" %>
+        </div>
+        <div class="form-group">
+          <%= f.text_field :birth_date, placeholder: "Fecha de nacimiento", class: "form-control input-lg" %>
+        </div>
+        <div class="form-group">
+          <%= f.text_field :birth_place, placeholder: "Lugar de nacimiento", class: "form-control input-lg" %>
+        </div>
+        <div class="form-group">
+          <%= f.text_field :death_date, placeholder: "Fecha de muerte", class: "form-control input-lg" %>
+        </div>
+        <div class="form-group">
+          <%= f.text_field :death_place, placeholder: "Lugar de muerte", class: "form-control input-lg" %>
+        </div>
+        <div class="form-group">
+          <%= f.url_field :image_url, placeholder: "Url de la foto", class: "form-control input-lg" %>
+        </div>
+        <div class="form-group">
+          <%= f.submit "Agregar", class: "btn btn-success btn-lg btn-block" %>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>

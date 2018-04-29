@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'add/more'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -53,8 +55,11 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+  get 'actors/index'
 
- get 'actors' => 'actors#index'
+ get '/actors', to: 'actors#index'
+ get 'actors/new', to: 'actors#new', as: "new_actor"
+ post '/actors', to: 'actors#create'
 
 
   

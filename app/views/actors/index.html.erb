@@ -37,7 +37,7 @@
 
 
 <tbody>  
-<% @actors.each do |field| %>
+<% @actor.each do |field| %>
 <tr>
     <td scope="row"><img src= <%= field.image_url %> class="rounded float-left" > </td>
     <td scope="row"><%= field.name %> </td>
@@ -48,11 +48,20 @@
     <td scope="row"><%= field.death_date %> </td>
 
 
+
 </tr>
+
+  
+
+
 
 <% end %>  
   </tbody>  
 </table>
+
+<div class="text-right">
++      <%= link_to "Crear Actor", new_actor_path, class: "btn btn-success" %>
++    </div>
 
 </div>
 </body>
