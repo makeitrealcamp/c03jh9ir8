@@ -1,4 +1,8 @@
-<h1>Listado de Todos los Actores</h1>
+<h1>Listado de Actores</h1>
+
+<div>
+	<%= link_to "Crear Actor", new_actor_path %> 
+</div>
 
 <table border="1" >
 	<thead>
@@ -35,7 +39,7 @@
 
 <!-- 
 
-t.string   "name",        limit: 100
+	t.string   "name",        limit: 100
     t.text     "bio"
     t.date     "birth_date"
     t.string   "birth_place", limit: 100
