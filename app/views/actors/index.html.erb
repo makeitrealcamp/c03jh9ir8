@@ -1,0 +1,23 @@
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Foto</th>
+        <th>Nombre</th>
+        <th>Bio</th>
+        <th>Fecha Nacimiento</th>
+        <th>Lugar Nacimiento</th>
+      </tr>
+    </thead>
+    <% @actors.each do |actor| %>
+    <tbody>
+      <tr>
+        <td><img src="<%=actor.image_url %>" alt="Smiley face" height="42" width="42"></td>
+        <td><%=actor.name%></td>
+        <td><%=actor.bio%></td>
+        <td><%=actor.birth_date%></td>
+        <td><%=actor.birth_place%></td>
+      </tr>
+    </tbody>
+
+    <%end%>
+  </table>
