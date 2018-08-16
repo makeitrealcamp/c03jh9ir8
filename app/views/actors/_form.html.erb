@@ -1,0 +1,39 @@
+<h1><%= action %> Actor  </h1>
+<%= form_for @actor do |f| %>
+  <div>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div>
+    <%= f.label :bio %><br>
+    <%= f.text_area :bio %>
+  </div>
+  <div>
+    <%= f.label :birth_date %><br>
+    <%= f.date_field :birth_date %>
+  </div>
+  <div>
+    <%= f.label :birth_place %><br>
+    <%= f.text_field :birth_place %>
+  </div>
+  <div>
+    <%= f.label :image_url %><br>
+    <%= f.text_field :image_url %>
+  </div>
+  <div class="field">
+    <%= label_tag(:alive, "Is alive?") %>
+    <%= f.check_box :alive %> <br>
+  </div>
+  <div>
+    <%= f.label :death_date %><br>
+    <%= f.date_field :death_date %>
+  </div>
+  <div>
+    <%= f.label :death_place %><br>
+    <%= f.text_field :death_place %>
+  </div>
+
+  <div>
+    <%= f.submit %>
+  </div>
+<% end %>
