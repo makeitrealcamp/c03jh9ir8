@@ -1,4 +1,5 @@
 <h1>Actor</h1>
+<p><%= link_to  "Crear Actor", new_actor_path %></p>
 <%@actors.each do |actor|%>
 <img src="<%=actor.image_url%>" width="128" height="188">
 <h3><%=actor.name%></h3>
