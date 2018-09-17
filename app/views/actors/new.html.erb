@@ -4,31 +4,39 @@
       <h1>Nuevo Actor</h1>
       <%= form_for @actors do |f| %>
         <div class="form-group">
+          <%= f.label :name %>
           <%= f.text_field :name, class: "form-control input-lg", placeholder: "Ingresa el nombre del actor" %>
         </div>
         <div class="form-group">
-          <%= f.text_field :bio, class: "form-control input-lg", placeholder: "Ingresa la biografia del actor" %>
+          <%= f.label :bio %>
+          <%= f.text_area :bio, class: "form-control input-lg", placeholder: "Ingresa la biografia del actor" %>
         </div>
         <div class="form-group">
+          <%= f.label :birth_date %>
           <%= f.date_field :birth_date, class: "form-control input-lg", placeholder: "Ingresa la fecha de nacimiento" %>
         </div>
         <div class="form-group">
+          <%= f.label :birth_place %>
           <%= f.text_field :birth_place, class: "form-control input-lg", placeholder: "Ingresa el lugar de nacimiento" %>
         </div>
         <div class="form-group">
-          <%= f.text_field :image_url, class: "form-control input-lg", placeholder: "Ingresa la URL de la foto" %>
+          <%= f.label :image_url %>
+          <%= f.url_field :image_url, class: "form-control input-lg", placeholder: "Ingresa la URL de la foto" %>
         </div>
         <div class="form-group">
-          <%= f.text_field :alive, class: "form-control input-lg", placeholder: "Esta vivo?" %>
+          <%= f.check_box :alive %>
+          <%= f.label :alive %>
         </div>
         <div class="form-group">
+          <%= f.label :death_date %>
           <%= f.date_field :death_date, class: "form-control input-lg", placeholder: "Ingresa la fecha de fallecimiento" %>
         </div>
         <div class="form-group">
+          <%= f.label :death_place %>
           <%= f.text_field :death_place, class: "form-control input-lg", placeholder: "Ingresa el lugar de fallecimiento" %>
         </div>
         <div class="form-group">
-          <%= f.submit "Publicar Actor", class: "btn btn-primary btn-lg btn-block" %>
+          <%= f.submit "Crear Actor", class: "btn btn-primary btn-lg btn-block" %>
         </div>
       <% end %>
     </div>
