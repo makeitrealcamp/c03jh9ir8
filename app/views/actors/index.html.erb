@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-8 offset-sm-2">
+
+      <div class="card-columns">
+        <% @actors.each do |actor| %>
+          <div class="card" style="width: 15rem;">
+            <img class="card-img p-2" src="<%= actor.image_url %>">
+            <div class="card-header"><%= actor.name %> </div>
+            <div class="card-body">
+              <p class="card-text text-truncate"><%= actor.bio %></p>
+              <p class="card-text"><small class="text-muted">born on <%= actor.birth_date%> in <%= actor.birth_place %></small></p>
+              <% unless actor.alive == true %>
+                <p class="card-text"><small class="text-muted">he died on<%= actor.death_date%> in <%= actor.death_place %></small></p>
+              <% end %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
