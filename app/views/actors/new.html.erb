@@ -1,0 +1,45 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-6 offset-sm-3">
+      <form class="form">
+      <%= form_for @actor do |f| %>
+        <div class="form-row">
+          <div class="form-group col-sm">
+            <%= f.label :Nombre_actor %><br>
+            <%= f.text_field :name, class: "form-control" %>
+          </div>
+        </div>
+        <div class="form-group">
+          <%= f.label :biografia %><br>
+          <%= f.text_area :bio, class: "form-control" %>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-sm-6">
+            <%= f.label :fecha_de_nacimiento %><br>
+            <%= f.date_field :birth_date, class: "form-control" %>
+            <%= f.label :Lugar_de_nacimiento %><br>
+            <%= f.text_field :birth_place, class: "form-control" %>
+          </div>
+          <div class="form-group col-sm-6">
+            <%= f.label :fecha_de_muerte %><br>
+            <%= f.date_field :death_date, class: "form-control" %>
+            <%= f.label :Lugar_de_muerte %><br>
+            <%= f.text_field :death_place, class: "form-control" %>
+          </div>
+        </div>
+        <div class="form-row">
+        <div class="form-group col-sm-6">
+          <%= f.label :Url_imagen %><br>
+          <%= f.url_field :image_url, class: "form-control" %>
+        </div>
+        <div class="form-group col-sm-6 align-center">
+          <%= f.label :esta_vivo? %>
+          ​<%= f.check_box :alive, {}, true, false %>
+        </div>
+      </div>
+        <%= f.submit class: "btn btn-primary col-sm-12"%>
+      <% end %>
+    </form>
+    </div>
+  </div>
+</div>
