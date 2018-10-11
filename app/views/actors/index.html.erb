@@ -1,8 +1,9 @@
-<h2>Actores</h2>
-
 <div class="row">
   <div class="col-sm-12">
     <h2>Actores</h2>
+    <div class="text-right">
+      <%= link_to "Crear Actor", new_actor_path, class: "btn btn-primary" %>
+    </div>
     <table class="table">
       <tr>
         <th>Foto</th>
@@ -21,8 +22,10 @@
         <td><%= actor.bio %></td>
         <td><%= actor.birth_date %></td>
         <td><%= actor.birth_place %></td>
+        <% if !actor.alive %>
         <td><%= actor.death_date %></td>
         <td><%= actor.death_place %></td>
+        <% end %>
       </tr>
       <%  end %>
     </table>
