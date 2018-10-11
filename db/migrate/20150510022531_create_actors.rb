@@ -14,3 +14,4 @@ class CreateActors < ActiveRecord::Migration
     end
   end
 end
+#DEclarada  tipos de datos
