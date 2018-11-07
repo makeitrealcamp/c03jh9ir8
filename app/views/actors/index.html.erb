@@ -1,0 +1,28 @@
+<h1>Lista de Actores</h1>
+
+<ul>
+  <% @actors.each do |actor|%>
+  <h1><%=actor.name%></h1>
+  <p><%=actor.bio%></p>
+  <h2>Foto</h2>
+  <img src="<%=actor.image_url%>" alt="">
+
+    <% if actor.alive? %>
+    <h2>Fecha de nacimiento:</h2>
+    <p><%= actor.birth_date %></p>
+    <h2>Lugar de nacimiento</h2>
+    <p><%= actor.birth_place %></p>
+
+    <% else %>
+    <h2>Fecha de nacimiento:</h2>
+    <p><%= actor.birth_date %></p>
+    <h2>Día de defunción:</h2>
+    <p> <%= actor.death_date %></p>
+    <h2>Lugar de defunción:</h2>
+    <p><%= actor.death_place %></p>
+
+    <%end%>
+  <%end%>
+</ul>
+
+<p> <%= link_to "Crear Actor", actors_path%></p>
