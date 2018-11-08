@@ -1,47 +1,15 @@
-<h1>Ingresa otro actor</h1>
+<h1>Crear un nuevo actor:</h1>
 
-<% if @errors %>
-  <ul>
-  <% @errors.each do |error| %>
-      <li><%= error %></li>
-  <% end %>
-  </ul>
-<% end %>
+ <%= form_for @actor do |f| %>
+		Nombre: </br><%= f.text_field :name %></br>
+		Biografia: </br><%= f.text_area :bio %></br>
+		Imagen: </br><%= f.text_field :image_url %></br>
+		Fecha de nacimiento: </br><%= f.date_field :birth_date %></br>
+		Lugar de nacimiento: </br><%= f.text_field :birth_place %></br>
+		Esta vivo: </br><%= f.check_box :alive %></br>
+		Fecha del fallecimiento: </br><%= f.date_field :death_date %></br>
+		Lugar del fallecimiento: </br><%= f.text_field :death_place %></br>
+		<%= f.submit%>
+    <% end %>
 
-<ul>
- <%=form_for @actor do |f|%>
- <li>
-   <%=f.label "Name"%>
-   <%=f.text_field :name%>
- </li>
- <li>
-   <%=f.label "Biography"%>
-   <%=f.text_field :bio%>
- </li>
- <li>
-   <%=f.label "Birth_date"%>
-   <%=f.date_field :birth_date%>
- </li>
- <li>
-   <%=f.label "Birth_place"%>
-   <%=f.text_field :birth_place%>
- </li>
- <li>
-   <%=f.label "URL de la imagen"%>
-   <%=f.text_field :image_url%>
- </li>
- <li>
-   <%=f.label "Aún vive?"%>
-   <%=f.check_box :alive %>
- </li>
- <li>
-  <%=f.label "Día de defunción"%>
-  <%=f.date_field :death_date %>
- </li>
- <li>
-   <%=f.label "Lugar de defunción"%>
-   <%=f.text_field :death_place%>
- </li>
-</ul>
-<p><%=f.submit "Guardar"%></p>
-<%end%>
+   <%= link_to 'Lista de Actores', actors_path %>
