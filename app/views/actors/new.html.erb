@@ -1,0 +1,15 @@
+<h1>Crea un nuevo actor:</h1>
+
+
+	<%= form_for @actor do |f| %>
+		nombre: </br><%= f.text_field :name %></br>
+		biografia: </br><%= f.text_area :bio %></br>
+		Imagen: </br><%= f.text_field :image_url %></br>
+		Fecha de nacimiento: </br><%= f.date_field :birth_date %></br>
+		Lugar de nacimiento: </br><%= f.text_field :birth_place %></br>
+		Esta vivo: </br><%= f.check_box :alive %></br>
+		Fecha del fallecimiento: </br><%= f.date_field :death_date %></br>
+		Lugar del fallecimiento: </br><%= f.text_field :death_place %></br>
+		<%= f.submit%>
+    <% end %>
+   <%= link_to 'Lista de Actores', actors_path %>
