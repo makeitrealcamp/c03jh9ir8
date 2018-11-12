@@ -1,12 +1,15 @@
 class ActorsController < ApplicationController
 
+  skip_before_action :verify_authenticity_token
+
   def index
     @actors = Actor.all
   end
 
   def create
     @actors = Actor.create!(actor_params)
-    render json: @actors
+    puts actor_params
+    redirect_to actors_path
   end
 
   def show
@@ -24,7 +27,6 @@ class ActorsController < ApplicationController
   private
 
   def actor_params
-    params.permit(:id)
+    params.permit(:id, :name, :bio, :birth_date, :birth_place, :image_url, :alive, :death_date, :death_place)
   end
-
 end

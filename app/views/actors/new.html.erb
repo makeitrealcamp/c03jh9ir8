@@ -1,5 +1,36 @@
-<h1>New Actor</h1>
+<h1>Crear Actor</h1>
 
-<%= render 'form', actor: @actor %>
+<form action="/actors" method="POST">
+    <span>Nombre:</span><br>
+    <input type="text" name="name" placeholder="Nombre..."><br><br>
 
-<%= link_to 'Back', actors_path %>
+    <span>URL Foto:</span><br>
+    <input type="text" name="image_url" placeholder="www.example.com"><br><br>
+
+    <span>Bio:</span><br>
+    <textarea name="bio" rows="3"></textarea><br><br>
+
+    <span>Fecha de nacimiento:</span><br>
+    <input type="text" name="birth_date" placeholder="01/01/1900"><br><br>
+
+    <span>Lugar de nacimiento:</span><br>
+    <input type="text" name="birth_place" placeholder="Los Alpes"><br><br>
+
+    <span>Falleció:</span><br>
+    <select name="alive">
+        <option value="true">No</option>
+        <option value="false">Si</option>
+    </select>
+
+    <br><br>
+
+    <span>Fecha Falleció:</span><br>
+    <input type="text" name="death_date" placeholder="01/01/1900"><br><br>
+
+    <span>Lugar Falleció:</span><br>
+    <input type="text" name="death_place" placeholder="Los Alpes"><br><br>
+
+
+    <input type="submit" value="Submit">
+
+</form>
