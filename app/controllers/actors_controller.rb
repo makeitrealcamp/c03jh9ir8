@@ -8,7 +8,6 @@ class ActorsController < ApplicationController
 
   def create
     @actors = Actor.create!(actor_params)
-    puts actor_params
     redirect_to actors_path
   end
 
