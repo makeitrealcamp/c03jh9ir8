@@ -1,0 +1,11 @@
+<%= form_for @actor do |f| %>
+Nombre: <%= f.text_field :name %><br>
+Biografía: <%= f.text_area :bio %><br>
+Fecha de Nacimiento (AAAA-MM-DD): <%= f.text_field :birth_date %><br>
+Lugar de Nacimiento: <%= f.text_field :birth_place %><br>
+Foto (url): <%= f.text_field :image_url %><br>
+Vivo? <%= f.check_box :alive %><br>
+Fecha de Fallecimiento: <%= f.text_field :death_date %><br>
+Lugar de Fallecimiento: <%= f.text_field :death_place %><br>
+<%= f.submit %><br>
+<% end %>
