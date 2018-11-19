@@ -1,0 +1,21 @@
+<h1>Agrega un nuevo actor</h1>
+
+<%= form_for @actor do |f| %>
+   <p> <%= f.label :nombre%>
+    <%= f.text_field :name%></p>
+    <p><%= f.label :biografia%>
+    <%= f.text_area :bio%></p>
+    <p><%= f.label :url_de_imagen%>
+    <%= f.text_field :image_url%></p>
+    <p><%= f.label :fecha_de_nacimiento%>
+    <%= f.text_field :birth_date%></p>
+    <p><%= f.label :lugar_de_nacimiento%>
+    <%= f.text_field :birth_place%></p>
+    <p><%= f.label :fecha_de_fallecimiento%>
+    <%= f.text_field :death_date%></p>
+    <p><%= f.label :lugar_de_fallecimiento%>
+    <%= f.text_field :death_place%></p>
+
+    <%= f.submit%>
+        
+<% end %>
