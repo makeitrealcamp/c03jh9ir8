@@ -1,0 +1,18 @@
+
+
+<ul>
+  <%@actors.each do |actor|%>
+    <h1><%= actor.name %></h1>
+    <li><%= actor.image_url %></li>
+    <li><%= actor.bio %></li>
+    <li><%= actor.birth_date %></li>
+    <li><%= actor.birth_place %></li>
+
+
+    <% if actor.alive == false %>
+        <h4>Murio el día:<%= actor.death_date %></h4>
+        <h4>Murió en:<%= actor.death_place %></h4>
+    <% end %>
+
+  <%end%>
+</ul>
