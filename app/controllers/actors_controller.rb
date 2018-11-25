@@ -13,6 +13,8 @@ class ActorsController < ApplicationController
 
     if @actor.save
       redirect_to '/actors'
+    else
+      render '/actors/new'
     end
   end
 
