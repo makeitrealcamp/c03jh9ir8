@@ -1,0 +1,14 @@
+<h1>Crear actores</h1>
+
+<%= form_for @actor, url:"/actors", method: "post" do |f|%>
+  <%= f.text_field :name, placeholder: "name" %>
+  <%= f.text_field :bio, placeholder: "bio" %>
+  <%= f.number_field :birth_date, placeholder: "birth_date" %>
+  <%= f.text_field :birth_place, placeholder: "birth_place" %>
+  <%= f.text_field :image_url, placeholder: "image_url" %>
+  <%= f.text_field :alive, placeholder: "alive" %>
+  <%= f.number_field :death_date, placeholder: "death_date" %>
+  <%= f.text_field :death_place, placeholder: "death_place" %>
+
+  <%= f.submit "Crear Actor"%>
+<% end %>
