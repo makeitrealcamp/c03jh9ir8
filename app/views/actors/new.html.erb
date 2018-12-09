@@ -1,0 +1,31 @@
+<h1>New Actor</h1>
+<%= form_for @actor do |f| %>
+<div>
+  <%= f.text_field :name, placeholder: "Nombre Actor!" %>
+</div>
+<div>
+  <%= f.text_area :bio, placeholder: "Biografia!" %>
+</div>
+<div>
+  <%= f.date_field :birth_date, placeholder: "Fecha de nacimiento" %>
+</div>
+<div>
+  <%= f.text_field :birth_place, placeholder: "Lugar de nacimiento" %>
+</div>
+<div>
+  <%= f.url_field :image_url, placeholder: "Foto" %>
+</div>
+<div>
+  <%= f.check_box :alive %>
+  <%= f.label :alive, "Fallecido" %>
+</div>
+<div>
+  <%= f.date_field:death_date, placeholder: "Fecha de fallecimiento" %>
+</div>
+<div>
+  <%= f.text_field :death_place, placeholder: "Lugar de fallecimiento" %>
+</div>
+<div>
+  <%= f.submit "Crear Actor" %>
+</div>
+<% end %>
