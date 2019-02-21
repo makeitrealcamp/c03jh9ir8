@@ -3,6 +3,9 @@
 <div class="row">
 <div class="col-sm-12">
 <h1>Lista de actores</h1>
+<div class="text-right">
+  <%= link_to "Crear actor", new_actor_path, class: "btn btn-primary" %>
+</div>
 
 <% @actor.each do |actor| %>
   <div>
