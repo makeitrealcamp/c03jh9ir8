@@ -11,7 +11,7 @@ class ActorsController < ApplicationController
 	  @actor = Actor.new(actor_params)
 	 
 		if @actor.save
-	 	 		redirect_to root_path
+	 	 		redirect_to actors_path
 		else
 			render :new
 		end
