@@ -5,5 +5,9 @@
         <li><%= actor.bio %></li>
         <li><%= actor.birth_date %></li>
         <li><%= actor.birth_place %></li>
+        <%if !actor.alive %>
+            <li><%= actor.death_date %></li>
+            <li><%= actor.death_place %></li>
+        <% end %>
     <% end %>
 <ul>
