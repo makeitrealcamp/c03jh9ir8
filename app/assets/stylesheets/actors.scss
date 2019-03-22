@@ -1,3 +1,20 @@
 // Place all the styles related to the actors controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+tr,td{
+  border: 1px solid black;
+  width: 10% ;
+  text-align: left;
+}
+
+#bio{
+  width: 50%;
+}
+
+#foto{
+  width: 2%
+}
+// tr, td{
+  
+// }

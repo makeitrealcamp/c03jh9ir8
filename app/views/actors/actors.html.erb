@@ -1,0 +1,13 @@
+<% @actors.each do |actor| %>
+
+<table>
+  <tr>
+    <td id="foto"><a href="<%= actor.image_url %>">Foto</a></td>
+    <td><%= actor.name %></td>
+    <td id="bio"><%= actor.bio %></td>
+    <td><%= actor.birth_date %></td>
+    <td><%= actor.birth_place %></td>
+  </tr>
+</table>
+
+<% end %>
