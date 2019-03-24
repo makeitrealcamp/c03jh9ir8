@@ -1,7 +1,7 @@
 class ActorsController < ApplicationController
  skip_before_filter :verify_authenticity_token
 
-  def actors
+  def index
     @actors = Actor.all
   end
 
@@ -11,6 +11,6 @@ class ActorsController < ApplicationController
 
   def create
     Actor.create(name: params[:new_actor_name], bio: params[:new_actor_bio], birth_date: params[:new_actor_bd],  birth_place: params[:new_actor_bp],image_url: params[:new_actor_photo])
-    redirect_to :actors
+    redirect_to :index
   end
 end
