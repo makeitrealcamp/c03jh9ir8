@@ -1,13 +1,15 @@
-<% @actors.each do |actor| %>
+<h1> Lista de actores </h1>
 
+<% @actors.each do |actor| %>
 <table>
   <tr>
-    <td id="foto"><a href="<%= actor.image_url %>">Foto</a></td>
+    <td id="foto"><img src="<%= actor.image_url %>"></td>
     <td><%= actor.name %></td>
     <td id="bio"><%= actor.bio %></td>
     <td><%= actor.birth_date %></td>
     <td><%= actor.birth_place %></td>
   </tr>
 </table>
-
 <% end %>
+
+<%= link_to("Crear Actor", crear_path) %>
