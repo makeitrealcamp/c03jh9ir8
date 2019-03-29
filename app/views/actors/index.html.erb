@@ -11,9 +11,13 @@
     <% if actor.alive %>
         <td>-------</td>
        <% else %>
-        <td style="color : red"><%= actor.death_date %></td>
+        <td <s></s>tyle="color : red"><%= actor.death_date %></td>
     <% end %>
   </tr>
   <br>
 </table>
 <% end %>
+<br>
+<br>
+<br>
+<%= link_to  "Crear Actor", new_actor_path %>
