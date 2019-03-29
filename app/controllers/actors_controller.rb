@@ -8,7 +8,7 @@ class ActorsController < ApplicationController
   end
 
   def create
-    actor = User.create(user_params)
+    actor = Actor.create(actor_params)
     redirect_to :index
   end
 
