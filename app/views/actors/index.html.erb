@@ -1,6 +1,8 @@
 
-
 <tbody>
+
+<p>  <%= link_to "Crear Actor", new_actor_path %>  </p>
+
     <%  @actors.each do |actor| %>  
       <tr>
          <td> <img src="<%= actor.image_url %>" alt="Imagen"> </br></td>               
@@ -16,3 +18,5 @@
       </tr> 
     <%end%> 
  <tbody>
+
+ 
