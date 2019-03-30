@@ -1,0 +1,18 @@
+
+
+<tbody>
+    <%  @actors.each do |actor| %>  
+      <tr>
+         <td> <img src="<%= actor.image_url %>" alt="Imagen"> </br></td>               
+         <td>Nombre: <%= actor.name %></br></td>  
+         <td>Biografia: <%= actor.bio %></br></td>  
+         <td>Fecha Nacimiento: <%= actor.birth_date %></br></td>  
+         <td>Lugar Nacimiento: <%= actor.birth_place %></br></td>
+           <% if actor.death_date != nil  %>
+            <td>Fecha de Fallecimiento: <%= actor.death_date %></br></td>
+            <td>Lugar de Fallecimiento: <%= actor.death_place %></br></td>
+           <%end%> 
+         </br>  
+      </tr> 
+    <%end%> 
+ <tbody>
