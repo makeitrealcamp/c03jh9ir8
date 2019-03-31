@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
 
-get 'actors/index'
+get '/actors', to: 'actors#index'
 
 end
