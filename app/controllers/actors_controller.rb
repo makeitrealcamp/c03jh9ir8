@@ -1,10 +1,18 @@
 class ActorsController < ApplicationController
   def index
-  @actor = Actor.all
-  @a= @actor.each do |e|
+  @actors = Actor.all
+  @a= @actors.each do |e|
       e
-      end
-
-
   end
+  end
+
+  def new
+  @actor = Actor.new
+  end
+
+  def create
+  actor = Actor.create
+  redirect_to actors_path
+  end
+
 end
