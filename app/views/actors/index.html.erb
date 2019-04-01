@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<h1>Haz Clic aquí para <%= link_to "Crear Actor", new_path %></h1>
+</head>
+<body>
+<table>
+	<tr>
+		<th>Foto</th>
+		<th>Nombre</th>
+		<th>Biografía</th>
+		<th>Fecha de Nacimiento</th>
+		<th>Lugar de Nacimiento</th>
+		<th>Fecha de Fallecimiento</th>
+		<th>Lugar de Fallecimiento</th>
+	</tr>
+	<% @actors.each do |actor| %>
+	<tr>
+		<td><img src="<%= actor.image_url %>"></td>
+		<td><%= actor.name %></td>
+		<td><%= actor.bio %></td>
+		<td><%= actor.birth_date %></td>
+		<td><%= actor.birth_place %></td>
+		<td><%= actor.death_date %></td>
+		<td><%= actor.death_place %></td>
+	</tr>
+	<% end %>
+</table>
+</body>
+</html>
