@@ -1,0 +1,14 @@
+
+
+<%  @actors.each do |actor| %>
+<div><strong>Name: </strong> <%= actor.name %> </div>
+<div><strong>Bio:</strong> <%= actor.bio %> </div>
+<div><strong>birth date:</strong> <%= actor.birth_date %> </div>
+<div><strong>birth place:</strong> <%= actor.birth_place %> </div>
+<% if actor.death_date %>
+<div><strong>death date:</strong> <%= actor.death_date %> </div>
+<div><strong>death place:</strong> <%= actor.death_place %> </div>
+<%end %>
+
+<br>
+<% end %>
