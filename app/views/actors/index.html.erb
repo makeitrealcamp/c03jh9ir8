@@ -1,0 +1,22 @@
+<ul>
+
+    <%@Actors.each do |actor|%>
+
+    <% if  actor.death_date.blank?%>
+
+    <li><%=actor.image_url %></li>
+    <li><%=actor.name %></li>
+    <li><%=actor.bio %></li>
+    <li><%=actor.birth_date %></li>
+    <li><%=actor.birth_place %></li>
+
+  <%else%>
+
+  <li><%=actor.birth_date %></li>
+  <li><%=actor.birth_place %></li>
+
+
+  <% end %>
+
+  <% end %>
+</ul>
