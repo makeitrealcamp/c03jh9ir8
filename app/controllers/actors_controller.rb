@@ -14,7 +14,7 @@ class ActorsController < ApplicationController
 
    def create
      actor = Actor.create(actor_params)
-     redirect_to actor_path(actor)
+     redirect_to actors_path
    end
 
    def actor_params
