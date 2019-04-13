@@ -1,4 +1,9 @@
  <%= form_for @actor, url: actors_path, method: :post do |f| %>
+  
+  <div>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
   <div>
     <%= f.label :bio %>
     <%= f.text_field :bio %>
