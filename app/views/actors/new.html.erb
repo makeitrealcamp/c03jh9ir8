@@ -1,0 +1,16 @@
+
+<a href="/">Go to Home</a>
+  <p></p>
+  <p>Nombre</p>
+<%= form_for @actor do |f| %>
+  Name: <%= f.text_field :name %><br />
+  Bio: <%= f.text_area :bio %><br />
+  Birth Date: <%= f.date_field :birth_date %><br />
+  Birth Place: <%= f.text_field :birth_place %><br />
+  Image URL: <%= f.text_field :image_url %><br />
+  Alive?: <%= f.check_box :alive %><br />
+  Dead Date: <%= f.date_field :death_date %><br />
+  Dead Place: <%= f.text_field :death_place %><br />
+
+  <%= f.submit  %>
+<% end %>
