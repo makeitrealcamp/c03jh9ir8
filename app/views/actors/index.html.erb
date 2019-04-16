@@ -1,0 +1,18 @@
+<table>
+  <tr>
+    <th>Foto</th>
+    <th>Nombre</th>
+    <th>Bio</th>
+    <th>Fecha de Nacimiento</th>
+    <th>Lugar de Nacimiento</th>
+  </tr>
+  <% @actors.each do |actor| %>
+  <tr>
+    <td><img src="<%= actor.image_url %>" alt="pial"></td>
+    <td><%= actor.name %></td>
+    <td><%= actor.bio %></td>
+    <td><%= actor.birth_date %></td>
+    <td><%= actor.birth_place %></td>
+  </tr>
+  <% end %>
+</table>
