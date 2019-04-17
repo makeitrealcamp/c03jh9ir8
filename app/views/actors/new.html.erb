@@ -1,0 +1,40 @@
+<h1>Create a new actor</h1>
+<%= form_for @actor do |f| %>
+  <p>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :bio %>
+    <%= f.text_field :bio %>
+  </p>
+  <p>
+    <%= f.label :birth_date %>
+    <%= f.date_field :birth_date %>
+  </p>
+  <p>
+    <%= f.label :birth_place %>
+    <%= f.text_field :birth_place %>
+  </p>
+  <p>
+    <%= f.label :image_url %>
+    <%= f.text_field :image_url %>
+  </p>
+  <p>
+    <%= f.label :alive %>
+    <%= f.check_box :alive %>
+  </p>
+  <p>
+    <%= f.label :death_date %>
+    <%= f.date_field :death_date %>
+  </p>
+  <p>
+    <%= f.label :death_place %>
+    <%= f.text_field :death_place %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+
+<% end %>
+

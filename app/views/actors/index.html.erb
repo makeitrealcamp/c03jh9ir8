@@ -1,0 +1,71 @@
+<!-- <table>
+  <thead>
+    <tr>
+      <th>Foto</th>
+      <th>Nombre</th>
+      <th>Bio</th>
+      <th>Fecha de Nacimiento</th>
+      <th>Lugar de Nacimiento</th>
+      <th>Fecha de Fallecimiento</th>
+      <th>Lugar de Fallecimiento</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @actors.each do |actor| %>
+      <tr>
+        <td><%= actor.image_url %></td>
+        <td><%= actor.name %></td>
+        <td><%= actor.bio %></td>
+        <td><%= actor.birth_date %></td>
+        <td><%= actor.birth_place %></td>
+        <td><%= actor.death_date %></td>
+        <td><%= actor.death_place %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table> -->
+
+<!-- <%= link_to "Crear Actor", new_actor_path %>
+<br>
+<br>
+<br>
+
+<% @actors.each do |actor| %>
+  <div>
+    <img src=<%= actor.image_url %> alt="<%= actor.name %>">
+    <h3><%= actor.name %></h3>
+    <p><%= actor.bio %></p>
+    <p><strong>Fecha de Nacimiento:</strong> <%= actor.birth_date %></p>
+    <% if !actor.alive %>
+      <p><strong>Fecha de Fallecimiento: </strong> <%= actor.death_date %></p>
+      <p><strong>Lugar de Fallecimiento: </strong> <%= actor.death_place %></p>
+    <% end %>
+  </div>
+<% end %> -->
+
+
+<div class="container">
+  <h1 style="font-size:50px"class="text-center text-info">ACTOR'S BIO</h1>
+  <br>
+
+  <% @actors.each do |actor| %>
+
+      <div class="row">
+        <div class="col-sm-4">
+          <img src="<%= actor.image_url %>" alt="">
+        </div>
+        <div class="col-sm-8">
+          <h1><%= actor.name %></h1>
+          <p>
+            <%= actor.alive ? "#{actor.birth_date}, #{actor.birth_place}" : "#{actor.death_date}, #{actor.death_place}"%>
+            <% if !actor.alive %>
+              <a href='#'><span class='badge' style='background-color: red'>Death date</span></a>
+            <% end %>
+          </p>
+          <p><%= actor.bio %></p>
+        </div>
+      </div>
+
+    <br>
+  <% end %>
+</div>
