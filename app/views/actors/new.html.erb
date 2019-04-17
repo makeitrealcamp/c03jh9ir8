@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <%= form_for :actor, :url => { :action => "create" } do |f| %>
+      Foto: <%= f.text_field :image_url %><br />
+      Nombre: <%= f.text_field :name %><br />
+      Bio: <%= f.text_area :bio %><br />
+      Fecha de Nacimiento: <%= f.text_field :birth_date %><br />
+      Lugar de Nacimiento: <%= f.text_field :birth_place %><br />
+      Fecha de Fallecimiento: <%= f.text_field :birth_date %><br />
+      Lugar de Fallecimiento: <%= f.text_field :birth_place %><br />
+      <%= f.submit %>
+    <% end %>
+  </body>
+</html>
