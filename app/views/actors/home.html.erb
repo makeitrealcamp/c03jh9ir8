@@ -1,8 +1,9 @@
 <h1>Lista de Actores</h1>
+<h3><%=link_to "Crear Actor", new_actor_path%></h3>
+
 <ol>
-  <%@actors.each do |actor|%>
+<%@actors.each do |actor|%>
   <li>
-      <img src="<%=actor.image_url%>">
     <p>
       <h3>Nombre</h3> - <%= actor.name %>
     </p>
@@ -21,5 +22,5 @@
     </p>
   </li>
   <br>
-  <%end%>
+<%end%>
 </ol>
