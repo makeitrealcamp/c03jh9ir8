@@ -1,0 +1,15 @@
+<h2>Crear actor Nuevo</h2>
+
+<%= form_for @actor do |f| %>
+  <%= f.text_field :name,{'placeholder': 'Nombre'} %><br>
+  <br>
+  <%= f.text_area :bio, {'placeholder': 'Biografia'} %><br>
+  <br>
+  <%= f.date_field :birth_date,{'placeholder': 'Fecha de Nacimiento'}%><br>
+  <br>
+  <%= f.text_field :birth_place, {'placeholder': 'Lugar de Nacimiento'} %><br>
+  <br>
+  <%= f.text_area :image_url, {'placeholder': 'Link Imagen'}%><br>
+  <br>
+  <%= f.submit "Crear Actor" %>
+<% end %>
