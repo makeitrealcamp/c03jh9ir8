@@ -26,3 +26,39 @@ Things you may want to cover:
 
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
+
+-----------------------------------------------------------------------
+Discusión: Listando actores
+Nuestra solución es la siguiente:
+
+Primero, creamos la ruta en config/routes.rb. Hay dos formas de hacerlo:
+
+get 'actors', to: 'actors#index'
+
+# también funciona:
+# get `actors` => 'actors#index'
+Otra forma es usando resources:
+
+resources :actors, only: [:index]
+Las dos (tres) formas son equivalentes.
+
+Tip: Puedes verificar tus rutas ejecutando el comando rake routes en la consola.
+El siguiente paso es crear el método index en el archivo app/controllers/actors_controller.rb:
+
+def index
+  @actors = Actor.all
+end
+Y ahora creamos la vista index.html.erb en la carpeta app/views/actors:
+
+<% @actors.each do |actor| %>
+  <div>
+    <img src=<%= actor.image_url %> alt="<%= actor.name %>">
+    <h3><%= actor.name %></h3>
+    <p><%= actor.bio %></p>
+    <p><strong>Fecha de Nacimiento:</strong> <%= actor.birth_date %></p>
+    <% if !actor.alive %>
+      <p><strong>Fecha de Fallecimiento: </strong> <%= actor.death_date %></p>
+      <p><strong>Lugar de Fallecimiento: </strong> <%= actor.death_place %></p>
+    <% end %>
+  </div>
+<% end %>
