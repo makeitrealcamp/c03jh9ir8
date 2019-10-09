@@ -1,15 +1,33 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Actores</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<%= yield %>
+
 <ul>
-  <% @actors.each do |user| %>
-    <li><img src = "<%= user.image_url %>" ></li>
-    <li> <%= user.name %> </li>
-    <li> <%= user.bio %> </li>
-    <li> <%= user.birth_date %> </li>
-    <li> <%= user.birth_place %> </li>
+  <% @actors.each do |actor| %>
+    <li><img src = "<%= actor.image_url %>" ></li>
+    <li> <%= actor.name %> </li>
+    <li> <%= actor.bio %> </li>
+    <li> <%= actor.birth_date %> </li>
+    <li> <%= actor.birth_place %> </li>
     <li> </li>
-    <% if user.death_date then %>
-    <li> <%= user.death_date %> </li>
-    <li> <%= user.death_place %> </li>
+    <% if actor.death_date then %>
+    <li> <%= actor.death_date %> </li>
+    <li> <%= actor.death_place %> </li>
     <li> </li>
     <% end %>
   <% end %>
 </ul>
+
+<%= link_to "Crear Actor", actors_new_path %>
+
+</body>
+</html>

@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
-
-  # get '/actors' => 'actors#index'
   resources :actors
+  get '/actors' => 'actors#index'
+  get '/actors/new' => 'actors#new'
+  # root 'actors#index'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
