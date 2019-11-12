@@ -1,0 +1,52 @@
+<form class"form-inline">
+  <%= form_for @actor do |t| %>
+    <div>
+
+    <div class="form-group">
+      <%= t.label :image_url%>
+      <%= t.url_field :image_url, class: "form-control" %>
+    </div>
+
+     <div>
+        <%= t.label :name%>
+        <%= t.text_field :name,  class: "form-control"%>
+     </div>
+
+     <div>
+        <%= t.label :bio%>
+        <%= t.text_area :bio, rows: 10,  class: "form-control"%>
+     </div>
+
+      <div>
+        <%= t.radio_button :alive, true %>
+        <%= t.radio_button :alive, false, class: "form-control" %>
+      </div>
+
+
+        <div>
+          <%= t.label :birth_date%>
+          <%= t.date_field :birth_date, class: "form-control"%>
+        </div>
+
+
+      <div>
+        <%= t.label :birth_place %>
+        <%= t.text_field :birth_place, class: "form-control", class: "form-control", col: 3%>
+      </div>
+
+
+      <div class="form-control">
+        <%= t.label :death_place %>
+        <%= t.text_field :death_place, class: "form-control", class: "form-control"%>
+      </div>
+
+     <div class="form-control">
+        <%= t.label :death_date, class: "form-control" %>
+        <%= t.date_field :death_date, class: "form-control"%>
+     </div>
+
+    </div>
+
+    <%= t.submit "Create" , class: "btn btn-dark"%>
+  <% end %>
+</form>
