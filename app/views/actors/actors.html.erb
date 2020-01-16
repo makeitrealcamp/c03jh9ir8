@@ -1,0 +1,29 @@
+<table border="1">
+
+<thead>
+    <tr>
+        <th> <h3>Name</h3></th>
+        <th> <h3>Bio</h3></th>
+        <th> <h3>Birth Date</h3></th>
+        <th> <h3>Birth Place</h3></th>
+        <th> <h3>Image URL</h3></th>
+        <th> <h3>Death Date</h3></th>
+        <th> <h3>Death Place</h3></th>
+    </tr>
+</thead>
+
+<tbody>
+    <% @actors.each do |actor| %>
+        <tr>
+            <td><%= actor["name"]%></td>
+            <td><%= actor["bio"]%></td>
+            <td><%= actor["birth_date"]%></td>
+            <td><%= actor["birth_place"]%></td>
+            <td><%= actor["image_url"]%></td>
+            <td><%= actor["death_date"]%></td>
+            <td><%= actor["death_place"]%></td>
+        </tr>
+    <% end %>
+</tbody>
+
+</table> 
