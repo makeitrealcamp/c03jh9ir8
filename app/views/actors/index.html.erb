@@ -1,0 +1,13 @@
+<h1>Lista de actores</h1>
+
+<%= link_to "Añadir nuevo actor", new_actor_path%>
+
+<table>
+    <% @actors.each do |actor|%>
+        <tr>
+            <td><%= actor.name%></td>
+            <td><%= actor.bio%></td>
+            <td><%= link_to "Mostrar", actor_path(actor.id)%></td>
+        </tr>
+    <% end %>
+</table>
