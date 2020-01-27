@@ -1,0 +1,13 @@
+<h1> <%=link_to "crear un famoso", new_actor_path %> </h1>
+ <ul>
+<%@actors.each do |actor| %>
+    <li> <%= actor.name %> </li>
+    <p> <%= actor.bio %> </p>
+    <h3> <%= actor.birth_place %> </h3>
+    <% if actor.death_date %>
+	    <h3> death day: <%=actor.death_date %> </h3>
+	    <h3> death place: <%=actor.death_place %> </h3>
+	<% end %>
+   <img src="<%= actor.image_url %>"> 
+<% end %>
+</ul>
