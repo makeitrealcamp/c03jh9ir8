@@ -1,0 +1,40 @@
+<h1>Nuevo Actor</h1>
+
+<%= form_for @actor do |f| %>
+
+<div>
+  <%= f.label :name, 'Nombre' %><br>
+  <%= f.text_field :name %>
+</div>
+<div>
+  <%= f.label :bio, 'Biografía' %><br>
+  <%= f.text_field :bio %>
+</div>
+<div>
+  <%= f.label :birth_date, 'Fecha de nacimiento' %><br>
+  <%= f.date_field :birth_date %>
+</div>
+<div>
+  <%= f.label :birth_place, 'Lugar de nacimiento' %><br>
+  <%= f.text_field :birth_place %>
+</div>
+<div>
+  <%= f.label :image_url, 'Foto' %><br>
+  <%= f.text_field :image_url %>
+</div>
+<div>
+  <%= f.label :alive, 'Está vivo? (true or false)' %><br>
+  <%= f.text_field :alive %>
+</div>
+<div>
+  <%= f.label :death_date, 'Fecha de fallecimiento' %><br>
+  <%= f.date_field :death_date %>
+</div>
+<div>
+  <%= f.label :death_place, 'Lugar de fallecimiento' %><br>
+  <%= f.text_field :death_place %>
+</div>
+<div>
+  <%= f.submit "Crear Actor"%></div>
+</div>
+<% end %>
