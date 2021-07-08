@@ -1,0 +1,25 @@
+
+<div class="container">
+<div class="row">
+<div class="col-sm-12">
+<h1>Lista de actores</h1>
+<div class="text-right">
+  <%= link_to "Crear actor", new_actor_path, class: "btn btn-primary" %>
+</div>
+
+<% @actor.each do |actor| %>
+  <div>
+    <img src=<%= actor.image_url %> alt="<%= actor.name %>">
+    <h3><%= actor.name %></h3>
+    <p><%= actor.bio %></p>
+    <p><strong>Fecha de Nacimiento:</strong> <%= actor.birth_date %></p>
+    <% if !actor.alive %>
+      <p><strong>Fecha de Fallecimiento: </strong> <%= actor.death_date %></p>
+      <p><strong>Lugar de Fallecimiento: </strong> <%= actor.death_place %></p>
+    <% end %>
+  </div>
+<% end %>
+
+</div>
+</div>
+</div>
