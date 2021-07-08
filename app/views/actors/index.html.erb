@@ -1,0 +1,43 @@
+<%content_for :menuItems do%>
+  <%= link_to  "crear actor", new_actor_url, class: "navbar-item is-hidden-desktop-only" %>
+<%end%>
+<div class="columns is-multiline">
+  <%@actors.each do |actor|%>
+    <div class="column is-4">
+      <div class="card">
+        <div class="card-content">
+          <div class="media">
+            <div class="media-left">
+              <figure class="image profile-picture" >
+                <img  src="<%=actor.image_url%>" alt="<%= actor.name%>">
+              </figure>
+            </div>
+            <div class="media-content">
+              <p class="title is-4"><%= actor.name %></p>
+              <p class="subtitle is-6">
+                <%= actor.birth_date %>  </br>
+                <%= actor.birth_place %>
+              </p>
+            </div>
+          </div>
+          <div class="content">
+            <%= actor.bio %>
+          </div>
+        </div>
+        <footer class="card-footer">
+          <p class="card-footer-item">
+            <% if !actor.alive %>
+              <span>
+                RIP <a href="javascript:void(0);"><%= actor.death_date %> <%= actor.death_place %></a>
+              </span>
+            <% else %>
+              <span>
+                <a href="javascript:void(0);">Alive</a>
+              </span>
+            <% end %>                
+          </p>
+        </footer>
+      </div>
+    </div>
+  <%end%>
+</div>
